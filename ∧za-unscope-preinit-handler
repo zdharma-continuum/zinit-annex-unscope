@@ -1,0 +1,67 @@
+#!/usr/bin/env zsh
+# -*- mode: sh; sh-indentation: 4; indent-tabs-mode: nil; sh-basic-offset: 4; -*-
+
+# Copyright (c) 2019-2020 Sebastian Gniazdowski
+
+∧za-unscope-preinit-handler() {
+
+    # Set the base and typically useful options
+    builtin emulate -LR zsh
+    builtin setopt extendedglob warncreateglobal typesetsilent noshortloops rcquotes
+
+    if [[ "$1" = plugin ]] {
+        local type=$1 user=$2 plugin=$3 id_as=$4 dir=${5#%} hook=$6 subtype=$7
+    } else {
+        local type=$1 ___url=$2 ___id_as=$3 dir=${4#%} hook=$5 subtype=$6
+    }
+
+    local -a match mbegin mend
+    local MATCH
+    integer MBEGIN MEND
+
+    local -A tpe_map
+    tpe_map=( p plugin s snippet )
+
+    local new_teleid=$ZINIT_ANNEX_UNSCOPE_MAPPINGS[$ZINIT_ICE[teleid]]
+
+    if [[ -n $new_teleid ]] {
+        local -a object_data
+        object_data=( "${(@Q)${(@z)new_teleid}}" )
+
+        if [[ $type == plugin && $tpe_map[$object_data[2]] == $type ]] {
+            # Overwrite the outside parameters in order
+            # to introduce the actual plugin's ID
+            ZINIT_ICE[teleid]=$object_data[1]
+            .zinit-any-to-user-plugin $ZINIT_ICE[teleid]
+            ___user=$reply[1] ___plugin=$reply[2]
+            ___pdir_path="${${${(M)___user:#%}:+$___plugin}:-${ZINIT[PLUGINS_DIR]}/${___id_as//\//---}}"
+            ___pdir_orig="$___pdir_path"
+
+            # Debug message
+            (( $+ZINIT_ICE[debug] )) && \
+                +zinit-message "{pre}unscope annex: {msg}Matched the following" \
+                    "$tpe_map[$object_data[2]]: {url}$ZINIT_ICE[teleid]{rst}"
+        } elif [[ $type == snippet && $tpe_map[$object_data[2]] == $type ]] {
+            # Overwrite the outside parameters in order
+            # to introduce the actual snippet's URL
+            ZINIT_ICE[teleid]=$object_data[1]
+            eval "url=\"$ZINIT_ICE[teleid]\""
+            save_url=$ZINIT_ICE[teleid]
+
+            # Repeat the needed code from before the
+            # preinit hook has been run
+            [[ $url = *(${(~kj.|.)${(Mk)ZINIT_1MAP:#OMZ*}}|robbyrussell*oh-my-zsh|ohmyzsh/ohmyzsh)* ]] && local ZSH="${ZINIT[SNIPPETS_DIR]}"
+
+            # Debug message
+            (( $+ZINIT_ICE[debug] )) && \
+                +zinit-message "{pre}unscope annex: {msg}Matched the following" \
+                    "$tpe_map[$object_data[2]]: {url}$ZINIT_ICE[teleid]{rst}"
+        }
+    }
+
+
+    return 0
+
+}
+
+# vim:ft=zsh:tw=80:sw=4:sts=4:et
