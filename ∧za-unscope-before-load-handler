@@ -24,7 +24,7 @@
     local -A tpe_map
     tpe_map=( 0 plugin 1 snippet )
 
-    local new_teleid_data=${(v)ZINIT_ANNEX_UNSCOPE_MAPPINGS[(i)<->. ##$___id]}
+    local new_teleid_data=${(v)Zinit_Annex_Unscope_Mappings[(i)<->. ##$___id]}
     if [[ -z $new_teleid_data ]] {
         if .zinit-get-object-path plugin "${${___id#@}%%(///|//|/)}"; then
             { new_teleid_data="$(<$reply[1]/._zinit/dynamic-unscope)" } 2>/dev/null

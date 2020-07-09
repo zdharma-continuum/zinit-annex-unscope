@@ -28,9 +28,9 @@ autoload -Uz ∧za-unscope-before-load-handler .za-unscope-dynamic
 # are different in that they're not just stripped GitHub user name
 # (i.e.: unscoped), but in general free names.
 
-typeset -gA ZINIT_ANNEX_UNSCOPE_MAPPINGS
+typeset -gA Zinit_Annex_Unscope_Mappings
 
-ZINIT_ANNEX_UNSCOPE_MAPPINGS=(
+Zinit_Annex_Unscope_Mappings=(
     # z-a-as-monitor
     "1.   z-a-as-monitor"		"zinit-zsh/z-a-as-monitor 0"
     "2.   as-monitor"			"zinit-zsh/z-a-as-monitor 0"
