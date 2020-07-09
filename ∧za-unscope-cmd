@@ -9,6 +9,8 @@
     builtin emulate -LR zsh
     builtin setopt extendedglob warncreateglobal typesetsilent noshortloops rcquotes
 
+    (( $+reply && $+REPLY )) || unsetopt warncreateglobal
+
     # -D - clear out the recognized options
     # -E - allow mixing of options and non-options
     # -M - allow private arrays for the options
