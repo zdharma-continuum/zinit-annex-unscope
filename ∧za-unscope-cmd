@@ -103,7 +103,6 @@
                     "for the key{ehi}:{rst}{data}$id{msg}.{rst}"
         }
     }
-    unsetopt warncreateglobal
     REPLY=$new_teleid_data
     [[ -n $REPLY ]]
 }
