@@ -11,9 +11,19 @@
 
     local type=$1 id=$2 id_as=$3 hook=$4 subtype=$5
 
-    [[ $id == */* || $ZINIT_ICE[teleid] == */* ]] && {
-        (( $+ZINIT_ICE[debug] )) && \
-            +zinit-message "{pre}unscope annex: {msg}Skipping the ID: {meta}$id{msg}.{rst}"
+    # Exclude IDs with slashes and also packages
+    [[ $id == */* ]] && local bad_id=1 
+    [[ $ZINIT_ICE[teleid] == */* ]] && local bad_tele=1
+    (( ${+ZINIT_ICE[pack]} )) && local is_pack=1
+    if (( bad_id || bad_tele || is_pack )) {
+        if (( $+ZINIT_ICE[debug] )) {
+            local -a msgs
+            msgs=( ${bad_id:+the ID contains a slash}
+                   ${bad_tele:+"the {ice}teleid{meta}''{msg} ice contains a slash"}
+                   ${is_pack:+"the ID is a package / {ice}pack{meta}''{msg} ice given"} )
+            +zinit-message "{pre}unscope annex: {msg}Skipping the ID: {meta2}$id{msg}" \
+                "(reason(s): ${(j:, :)msgs}).{rst}"
+        }
         return 0
     }
 
