@@ -30,7 +30,7 @@
             { new_teleid_data="$(<$reply[1]/._zinit/dynamic-unscope)" } 2>/dev/null
         elif .zinit-get-object-path snippet "${${___id#@}%%(///|//|/)}"; then
             { new_teleid_data="$(<$reply[1]/$reply[2]/._zinit/dynamic-unscope)" } 2>/dev/null
-        elif .za-unscope-dynamic $___id; then
+        elif .za-unscope-dynamic "$___id"; then
             new_teleid_data=$REPLY
         fi
     }

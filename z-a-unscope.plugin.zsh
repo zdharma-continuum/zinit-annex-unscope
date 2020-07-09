@@ -9,7 +9,10 @@
 0="${${ZERO:-${0:#$ZSH_ARGZERO}}:-${(%):-%N}}"
 0="${${(M)0:#/*}:-$PWD/$0}"
 
-autoload -Uz ∧za-unscope-before-load-handler
+typeset -gA Zinit_Annex_Unscope
+Zinit_Annex_Unscope[0]="$0" Zinit_Annex_Unscope[repo-dir]="${0:h}"
+
+autoload -Uz ∧za-unscope-before-load-handler .za-unscope-dynamic
 
 # An empty stub to fill the help handler fields
 ∧za-unscope-help-null-handler() { :; }
