@@ -10,6 +10,13 @@
 
     (( $+reply && $+REPLY )) || unsetopt warncreateglobal
 
+    autoload -Uz is-at-least
+    local is_58
+    is-at-least 5.8 && is_58=1
+
+    local -a quiet
+    zparseopts -D -E -M ${is_58:+-F} -quiet=quiet q=quiet || return 1
+
     local name=$1 forks id
     local -a match mbegin mend
 
@@ -20,9 +27,9 @@
 	if [[ $reply[1] == (#b)([0-9]##):\ (*) ]] {
 	    forks=$match[1] id=$match[2]
 	    .zinit-any-colorify-as-uspl2 "$id"
-	    +zinit-message "{pre}unscope annex: {msg}GitHub-API found" \
+	    (( ${#quiet} )) || +zinit-message "{pre}unscope annex: {msg}GitHub-API found" \
 		    "plugin ({var}forks{msg}>={data}$forks{msg},"\
-"max.stars){ehi}: $REPLY{rst}"
+"max.stars){ehi}: $REPLY{msg}.{rst}"
 	    REPLY=$id
 	    return 0
 	} else {
