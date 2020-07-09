@@ -26,6 +26,11 @@ autoload -Uz ∧za-unscope-before-load-handler \
     ∧za-unscope-help-null-handler \
     "dynamic-unscope''" # New ices
 
+@zinit-register-annex "z-a-unscope" \
+    subcommand:unscope \
+    ∧za-unscope-cmd \
+    ∧za-unscope-cmd-help-handler
+
 # The hash that holds mappings of the unscoped plugin names to the
 # scoped ones, and also the nick-names that map to the same, however
 # are different in that they're not just stripped GitHub user name
