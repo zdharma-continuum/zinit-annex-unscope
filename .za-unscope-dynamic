@@ -31,7 +31,7 @@
 	    .zinit-any-colorify-as-uspl2 "$id"
 	    (( ${#quiet} )) || +zinit-message "{pre}unscope annex: {msg}GitHub-API found" \
 		    "plugin ({var}forks{msg}>={data}$forks{msg},"\
-"max.stars){ehi}: $REPLY{msg}.{rst}"
+"max.stars){ehi}:{rst} $REPLY{msg}.{rst}"
 	    REPLY=$id
 	    return 0
 	} else {
