@@ -31,36 +31,62 @@ autoload -Uz ∧za-unscope-before-load-handler .za-unscope-dynamic
 typeset -gA Zinit_Annex_Unscope_Mappings
 
 Zinit_Annex_Unscope_Mappings=(
+    # zdharma/null
+    "0.   null"				"zdharma/null 0"
+
     # z-a-as-monitor
-    "1.   z-a-as-monitor"		"zinit-zsh/z-a-as-monitor 0"
-    "2.   as-monitor"			"zinit-zsh/z-a-as-monitor 0"
-    "3.   monitor"			"zinit-zsh/z-a-as-monitor 0"
+    "1.   as-monitor"			"zinit-zsh/z-a-as-monitor 0"
+    "2.   monitor"			"zinit-zsh/z-a-as-monitor 0"
                                          
     # z-a-patch-dl                     
-    "4.   z-a-patch-dl"			"zinit-zsh/z-a-patch-dl 0"
-    "5.   patch-dl"			"zinit-zsh/z-a-patch-dl 0"
+    "3.   patch-dl"			"zinit-zsh/z-a-patch-dl 0"
                                          
     # z-a-rust                         
-    "6.   z-a-rust"			"zinit-zsh/z-a-rust 0"
-    "7.   rust"				"zinit-zsh/z-a-rust 0"
+    "4.   rust"				"zinit-zsh/z-a-rust 0"
                                          
     # z-a-bin-gem-node                 
-    "8.   z-a-bin-gem-node"		"zinit-zsh/z-a-bin-gem-node 0"
-    "9.   bin-gem-node"			"zinit-zsh/z-a-bin-gem-node 0"
-    "10.  bgn"				"zinit-zsh/z-a-bin-gem-node 0"
+    "5.   bin-gem-node"			"zinit-zsh/z-a-bin-gem-node 0"
+    "6.   bgn"				"zinit-zsh/z-a-bin-gem-node 0"
                                 
+    # zsh-syntax-highlighting  
+    "7.  z-sy-h"		        "zdharma/zsh-syntax-highlighting 0"
+
     # fast-syntax-highlighting  
-    "11.  fast-syntax-highlighting"	"zdharma/fast-syntax-highlighting 0"
-    "12.  f-sy-h"		        "zdharma/fast-syntax-highlighting 0"
-    "13.  fsh"				"zdharma/fast-syntax-highlighting 0"
+    "8.  f-sy-h"		        "zdharma/fast-syntax-highlighting 0"
+    "9.  fsh"				"zdharma/fast-syntax-highlighting 0"
 
     # history-search-multi-word
-    "14.  history-search-multi-word"	"zdharma/history-search-multi-word 0"
-    "15.  hsmw"				"zdharma/history-search-multi-word 0"
+    "10.  hsmw"				"zdharma/history-search-multi-word 0"
+
+    # Prezto archive
+    "11.  archive"			"PZTM::archive 1"
+    "12.  arch"				"PZTM::archive 1"
+
+    # Prezto directory
+    "13.  directory"			"PZTM::directory 1"
+    "14.  dir"				"PZTM::directory 1"
 
     # Prezto environment
     "15.  environment"			"PZTM::environment 1"
     "16.  env"				"PZTM::environment 1"
+
+    # Prezto utility
+    "17.  utility"			"PZTM::utility 1"
+    "18.  util"				"PZTM::utility 1"
+
+    # ZUI
+    "19.  zui"				"zdharma/zui 0"
+    "20.  ZUI"				"zdharma/zui 0"
+
+    # Zconvey
+    "19.  zconv"			"zdharma/zconvey 0"
+
+    # Zbrowse
+    "20.  zbrowse"			"zdharma/zbrowse 0"
+
+    # zsh-autosuggestions
+    "21.  autosuggestions"		"zsh-users/zsh-autosuggestions 0"
+    "22.  autosug"			"zsh-users/zsh-autosuggestions 0"
 )
 
 # vim:ft=zsh:tw=80:sw=4:sts=4:noet
