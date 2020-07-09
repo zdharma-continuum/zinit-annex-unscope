@@ -8,6 +8,8 @@
     builtin emulate -LR zsh
     builtin setopt extendedglob warncreateglobal typesetsilent noshortloops rcquotes
 
+    (( $+reply && $+REPLY )) || unsetopt warncreateglobal
+
     local name=$1 forks id
     local -a match mbegin mend
 
