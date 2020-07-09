@@ -26,9 +26,11 @@
     local -a help no_api reply_only msg type
     zparseopts -D -E -M ${is_58:+-F} -no-api=no_api n=no_api \
         -reply-ony=reply_only r=reply_only -msg=msg m=msg \
-        -type=type t=type h=help -help=help || {
+        -type=type t=type h=help -help=help || retval=1
+        if [[ $retval -gt 0 || $1 = -* ]] {
             +zinit-message "{nl}{error}unscope annex: {msg}Incorrect options" \
-                    "given. The usage:{rst}{nl}"
+                "given${${(M)1:#-*}:+ "(bad option: {ehi}$1{rst}{msg})"}." \
+                "The usage:{rst}{nl}"
             help=( -h ) retval=1
         }
 
