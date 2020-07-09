@@ -3,7 +3,7 @@
 
 # Copyright (c) 2020 Sebastian Gniazdowski
 
-∧za-unscope-preinit-handler() {
+∧za-unscope-before-load-handler() {
 
     # Set the base and typically useful options.
     builtin emulate -LR zsh

@@ -9,14 +9,14 @@
 0="${${ZERO:-${0:#$ZSH_ARGZERO}}:-${(%):-%N}}"
 0="${${(M)0:#/*}:-$PWD/$0}"
 
-autoload -Uz ∧za-unscope-preinit-handler
+autoload -Uz ∧za-unscope-before-load-handler
 
 # An empty stub to fill the help handler fields
 ∧za-unscope-help-null-handler() { :; }
 
 @zinit-register-annex "z-a-unscope" \
     hook:before-load-5 \
-    ∧za-unscope-preinit-handler \
+    ∧za-unscope-before-load-handler \
     ∧za-unscope-help-null-handler \
     "" # No ices
 
