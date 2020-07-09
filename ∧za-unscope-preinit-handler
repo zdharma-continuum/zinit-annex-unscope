@@ -41,7 +41,6 @@
         (( $+ZINIT_ICE[debug] )) && \
             +zinit-message "{pre}unscope annex: {msg}Matched the following" \
                 "$tpe_map[$object_data[2]]: {url}$ZINIT_ICE[teleid]{rst}"
-        return 1
     }
 
     return 0
