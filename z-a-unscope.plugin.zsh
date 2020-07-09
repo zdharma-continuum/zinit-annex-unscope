@@ -21,7 +21,7 @@ autoload -Uz ∧za-unscope-before-load-handler ∧za-unscope-cmd .za-unscope-dyn
     hook:before-load-5 \
     ∧za-unscope-before-load-handler \
     ∧za-unscope-help-null-handler \
-    "" # No ices
+    "dynamic-unscope''" # New ices
 
 # The hash that holds mappings of the unscoped plugin names to the
 # scoped ones, and also the nick-names that map to the same, however
