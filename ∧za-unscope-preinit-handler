@@ -5,63 +5,46 @@
 
 ∧za-unscope-preinit-handler() {
 
-    # Set the base and typically useful options
+    # Set the base and typically useful options.
     builtin emulate -LR zsh
     builtin setopt extendedglob warncreateglobal typesetsilent noshortloops rcquotes
 
-    if [[ "$1" = plugin ]] {
-        local type=$1 user=$2 plugin=$3 id_as=$4 dir=${5#%} hook=$6 subtype=$7
-    } else {
-        local type=$1 ___url=$2 ___id_as=$3 dir=${4#%} hook=$5 subtype=$6
-    }
+    local type=$1 id=$2 id_as=$3 hook=$4 subtype=$5
 
     local -a match mbegin mend
     local MATCH
     integer MBEGIN MEND
 
     local -A tpe_map
-    tpe_map=( p plugin s snippet )
+    tpe_map=( 0 plugin 1 snippet )
 
-    local new_teleid=$ZINIT_ANNEX_UNSCOPE_MAPPINGS[$ZINIT_ICE[teleid]]
+    local new_teleid_data=$ZINIT_ANNEX_UNSCOPE_MAPPINGS[$___id]
 
-    if [[ -n $new_teleid ]] {
+    if [[ -n $new_teleid_data ]] {
         local -a object_data
-        object_data=( "${(@Q)${(@z)new_teleid}}" )
+        object_data=( "${(@Q)${(@z)new_teleid_data}}" )
 
-        if [[ $type == plugin && $tpe_map[$object_data[2]] == $type ]] {
-            # Overwrite the outside parameters in order
-            # to introduce the actual plugin's ID
-            ZINIT_ICE[teleid]=$object_data[1]
-            .zinit-any-to-user-plugin $ZINIT_ICE[teleid]
-            ___user=$reply[1] ___plugin=$reply[2]
-            ___pdir_path="${${${(M)___user:#%}:+$___plugin}:-${ZINIT[PLUGINS_DIR]}/${___id_as//\//---}}"
-            ___pdir_orig="$___pdir_path"
+        # Overwrite the outside parameters in order
+        # to introduce the actual object's ID.
+        ZINIT_ICE[id-as]=${id_as:-$___id}
+        ___id=$object_data[1]
+        ZINIT_ICE[teleid]=$object_data[1]
 
-            # Debug message
-            (( $+ZINIT_ICE[debug] )) && \
-                +zinit-message "{pre}unscope annex: {msg}Matched the following" \
-                    "$tpe_map[$object_data[2]]: {url}$ZINIT_ICE[teleid]{rst}"
-        } elif [[ $type == snippet && $tpe_map[$object_data[2]] == $type ]] {
-            # Overwrite the outside parameters in order
-            # to introduce the actual snippet's URL
-            ZINIT_ICE[teleid]=$object_data[1]
-            eval "url=\"$ZINIT_ICE[teleid]\""
-            save_url=$ZINIT_ICE[teleid]
-
-            # Repeat the needed code from before the
-            # preinit hook has been run
-            [[ $url = *(${(~kj.|.)${(Mk)ZINIT_1MAP:#OMZ*}}|robbyrussell*oh-my-zsh|ohmyzsh/ohmyzsh)* ]] && local ZSH="${ZINIT[SNIPPETS_DIR]}"
-
-            # Debug message
-            (( $+ZINIT_ICE[debug] )) && \
-                +zinit-message "{pre}unscope annex: {msg}Matched the following" \
-                    "$tpe_map[$object_data[2]]: {url}$ZINIT_ICE[teleid]{rst}"
+        # Test if we're being called from the
+        # object-load context.
+        if [[ $subtype == load ]] {
+            # Possibly change the object type.
+            ___is_snippet=$object_data[2]
         }
+
+        # Debug message.
+        (( $+ZINIT_ICE[debug] )) && \
+            +zinit-message "{pre}unscope annex: {msg}Matched the following" \
+                "$tpe_map[$object_data[2]]: {url}$ZINIT_ICE[teleid]{rst}"
+        return 1
     }
 
-
     return 0
-
 }
 
 # vim:ft=zsh:tw=80:sw=4:sts=4:et
