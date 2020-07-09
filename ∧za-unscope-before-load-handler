@@ -54,9 +54,11 @@
         }
 
         # Debug message.
-        (( $+ZINIT_ICE[debug] )) && \
-            +zinit-message "{pre}unscope annex: {msg}Matched the following" \
-                "$tpe_map[$object_data[2]]: {url}$ZINIT_ICE[teleid]{rst}"
+        if (( $+ZINIT_ICE[debug] )) {
+            +zinit-message "{pre}unscope annex: {msg}Matched the key:" \
+                "{meta}$id {ehi}→{rst}{data} $ZINIT_ICE[teleid]" \
+                "{msg}({meta2}$tpe_map[$object_data[2]]{msg}).{rst}"
+        }
     }
 
     return 0
