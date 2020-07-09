@@ -36,7 +36,9 @@
 
     if (( ${#help} )) {
         +zinit-message "{pre}unscope {meta}--help{data}/{meta}-h" \
-                "--no-api{data}/{meta}-n --reply-only{data}/{meta}-r{rst}{nl}{nl}" \
+                "--no-api{data}/{meta}-n --reply-only{data}/{meta}-r" \
+                "--msg{data}/{meta}-m {meta}--type{data}/{meta}-t" \
+                "{rst}{nl}{nl}" \
                 \
                 "{msg2}Description:{rst}{nl}" \
                 "{meta}--help{data}/{meta}-h{ehi}:{rst}{msg}       this message{rst}{nl}" \
@@ -48,7 +50,7 @@
                     "{meta2}GitHub API{msg} queries{rst}{nl}" \
                 "{meta}--type{data}/{meta}-t{ehi}:{rst}{msg}       append the object-type" \
                     "({data2}0{ehi}→{rst}{msg}plugin or {data2}1{ehi}→{rst}{msg}snippet)" \
-                    "to {var}\$REPLY{rst}"
+                    "to the {var}\$REPLY{rst}"
         return retval
     }
 
