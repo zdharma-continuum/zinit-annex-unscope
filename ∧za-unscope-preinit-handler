@@ -18,7 +18,7 @@
     local -A tpe_map
     tpe_map=( 0 plugin 1 snippet )
 
-    local new_teleid_data=$ZINIT_ANNEX_UNSCOPE_MAPPINGS[$___id]
+    local new_teleid_data=${(v)ZINIT_ANNEX_UNSCOPE_MAPPINGS[(i)<->. ##$___id]}
 
     if [[ -n $new_teleid_data ]] {
         local -a object_data

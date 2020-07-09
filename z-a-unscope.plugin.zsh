@@ -29,35 +29,35 @@ typeset -gA ZINIT_ANNEX_UNSCOPE_MAPPINGS
 
 ZINIT_ANNEX_UNSCOPE_MAPPINGS=(
     # z-a-as-monitor
-    "z-a-as-monitor"	        "zinit-zsh/z-a-as-monitor 0"
-    "as-monitor"	        "zinit-zsh/z-a-as-monitor 0"
-    "monitor"		        "zinit-zsh/z-a-as-monitor 0"
-                                
-    # z-a-patch-dl              
-    "z-a-patch-dl"	        "zinit-zsh/z-a-patch-dl 0"
-    "patch-dl"		        "zinit-zsh/z-a-patch-dl 0"
-                                
-    # z-a-rust                  
-    "z-a-rust"		        "zinit-zsh/z-a-rust 0"
-    "rust"		        "zinit-zsh/z-a-rust 0"
-                                
-    # z-a-bin-gem-node          
-    "z-a-bin-gem-node"	        "zinit-zsh/z-a-bin-gem-node 0"
-    "bin-gem-node"	        "zinit-zsh/z-a-bin-gem-node 0"
-    "bgn"		        "zinit-zsh/z-a-bin-gem-node 0"
+    "1.   z-a-as-monitor"		"zinit-zsh/z-a-as-monitor 0"
+    "2.   as-monitor"			"zinit-zsh/z-a-as-monitor 0"
+    "3.   monitor"			"zinit-zsh/z-a-as-monitor 0"
+                                         
+    # z-a-patch-dl                     
+    "4.   z-a-patch-dl"			"zinit-zsh/z-a-patch-dl 0"
+    "5.   patch-dl"			"zinit-zsh/z-a-patch-dl 0"
+                                         
+    # z-a-rust                         
+    "6.   z-a-rust"			"zinit-zsh/z-a-rust 0"
+    "7.   rust"				"zinit-zsh/z-a-rust 0"
+                                         
+    # z-a-bin-gem-node                 
+    "8.   z-a-bin-gem-node"		"zinit-zsh/z-a-bin-gem-node 0"
+    "9.   bin-gem-node"			"zinit-zsh/z-a-bin-gem-node 0"
+    "10.  bgn"				"zinit-zsh/z-a-bin-gem-node 0"
                                 
     # fast-syntax-highlighting  
-    "fast-syntax-highlighting"  "zdharma/fast-syntax-highlighting 0"
-    "f-sy-h"		        "zdharma/fast-syntax-highlighting 0"
-    "fsh"		        "zdharma/fast-syntax-highlighting 0"
+    "11.  fast-syntax-highlighting"	"zdharma/fast-syntax-highlighting 0"
+    "12.  f-sy-h"		        "zdharma/fast-syntax-highlighting 0"
+    "13.  fsh"				"zdharma/fast-syntax-highlighting 0"
 
     # history-search-multi-word
-    "history-search-multi-word" "zdharma/history-search-multi-word 0"
-    "hsmw"		        "zdharma/history-search-multi-word 0"
+    "14.  history-search-multi-word"	"zdharma/history-search-multi-word 0"
+    "15.  hsmw"				"zdharma/history-search-multi-word 0"
 
     # Prezto environment
-    "environment"		"PZTM::environment 1"
-    "env"			"PZTM::environment 1"
+    "15.  environment"			"PZTM::environment 1"
+    "16.  env"				"PZTM::environment 1"
 )
 
 # vim:ft=zsh:tw=80:sw=4:sts=4:noet
