@@ -15,7 +15,7 @@ autoload -Uz ∧za-unscope-preinit-handler
 ∧za-unscope-help-null-handler() { :; }
 
 @zinit-register-annex "z-a-unscope" \
-    hook:before-load \
+    hook:before-load-5 \
     ∧za-unscope-preinit-handler \
     ∧za-unscope-help-null-handler \
     "" # No ices
