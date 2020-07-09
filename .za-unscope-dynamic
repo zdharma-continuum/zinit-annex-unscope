@@ -1,0 +1,33 @@
+#!/usr/bin/env zsh
+# -*- mode: sh; sh-indentation: 4; sh-basic-offset: 4; indent-tabs-mode: nil;  -*-
+
+# Copyright 2020 Sebastian Gniazdowski
+# License: MIT
+
+.za-unscope-dynamic() {
+    builtin emulate -LR zsh
+    builtin setopt extendedglob warncreateglobal typesetsilent noshortloops rcquotes
+
+    local name=$1 forks id
+    local -a match mbegin mend
+
+    (( $+functions[.zinit-two-paths] )) || builtin source $ZINIT[BIN_DIR]/zinit-side.zsh
+
+    reply=( ${(f)"$($Zinit_Annex_Unscope[repo-dir]/ghquery "$name")"} )
+    if [[ -n $reply && ${#reply} -gt 0 ]] {
+	if [[ $reply[1] == (#b)([0-9]##):\ (*) ]] {
+	    forks=$match[1] id=$match[2]
+	    .zinit-any-colorify-as-uspl2 "$id"
+	    +zinit-message "{pre}unscope annex: {msg}GitHub-API found" \
+		    "plugin ({var}forks{msg}>={data}$forks{msg},"\
+"max.stars){ehi}: $REPLY{rst}"
+	    REPLY=$id
+	    return 0
+	} else {
+	    REPLY=
+	    return 1
+	}
+    }
+}
+
+# vim:ft=zsh:sw=4:sts=4:noet:
