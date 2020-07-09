@@ -88,6 +88,7 @@
             (( from_dynamic )) && local msg_bit=" ({meta2}GH-API{msg})"
             (( from_disk )) && local msg_bit=" (stored {meta2}GH-API{msg})"
             (( from_static )) && local msg_bit=" ({meta2}static map{msg})"
+
             +zinit-message "{pre}unscope annex: {msg}The key{ehi}:{rst}" \
             "{data}$id{msg} matched$msg_bit to{ehi}:{rst}" \
             "$REPLY{msg}.{rst}"
@@ -96,7 +97,7 @@
                     "for the key{ehi}:{rst}{data}$id{msg}.{rst}"
         }
     }
-    REPLY=$new_teleid_data
+    REPLY=${${type:+$new_teleid_data}:-${new_teleid_data%%\ ##<->}}
     [[ -n $REPLY ]]
 }
 
