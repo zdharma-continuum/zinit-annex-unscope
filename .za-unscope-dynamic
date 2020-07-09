@@ -14,6 +14,8 @@
     local is_58
     is-at-least 5.8 && is_58=1
 
+    REPLY=
+
     local -a quiet
     zparseopts -D -E -M ${is_58:+-F} -quiet=quiet q=quiet || return 1
 
