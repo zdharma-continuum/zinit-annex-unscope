@@ -11,6 +11,12 @@
 
     (( $+reply && $+REPLY )) || unsetopt warncreateglobal
 
+    autoload -Uz is-at-least
+    local is_58
+    is-at-least 5.8 && is_58=1
+
+    integer retval
+
     # -D - clear out the recognized options
     # -E - allow mixing of options and non-options
     # -M - allow private arrays for the options
@@ -18,9 +24,13 @@
     # The options are:
     # --with/--mod/-m/--use – to pass the desired module(s)
     local -a help no_api reply_only msg type
-    zparseopts -D -E -M -no-api=no_api n=no_api \
+    zparseopts -D -E -M ${is_58:+-F} -no-api=no_api n=no_api \
         -reply-ony=reply_only r=reply_only -msg=msg m=msg \
-        -type=type t=type h=help -help=help
+        -type=type t=type h=help -help=help || {
+            +zinit-message "{nl}{error}unscope annex: {msg}Incorrect options" \
+                    "given. The usage:{rst}{nl}"
+            help=( -h ) retval=1
+        }
 
     if (( ${#help} )) {
         +zinit-message "{pre}unscope {meta}--help{data}/{meta}-h" \
@@ -37,7 +47,7 @@
                 "{meta}--type{data}/{meta}-t{ehi}:{rst}{msg}       append the object-type" \
                     "({data2}0{ehi}→{rst}{msg}plugin or {data2}1{ehi}→{rst}{msg}snippet)" \
                     "to {var}\$REPLY{rst}"
-        return 0
+        return retval
     }
 
     local id=${${1#@}%%(///|//|/)}
