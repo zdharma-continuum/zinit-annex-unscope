@@ -15,7 +15,8 @@ Zinit_Annex_Unscope[0]="$0" Zinit_Annex_Unscope[repo-dir]="${0:h}"
 autoload -Uz ∧za-unscope-before-load-handler \
     ∧za-unscope-scope-cmd-help-handler \
     ∧za-unscope-scope-cmd \
-    .za-scope-dynamic
+    .za-scope-dynamic \
+    .za-unscope-list-mappings
 
 # An empty stub to fill the help handler fields
 ∧za-unscope-help-null-handler() { :; }

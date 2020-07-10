@@ -25,10 +25,10 @@
     #
     # The options are:
     # --with/--mod/-m/--use – to pass the desired module(s)
-    local -a help no_api reply_only msg type
+    local -a help no_api reply_only msg type list
     zparseopts -D -E -M ${is_58:+} -no-api=no_api n=no_api \
         -reply-ony=reply_only r=reply_only -msg=msg m=msg \
-        -type=type t=type h=help -help=help || retval=1
+        -type=type t=type h=help -help=help -list=list l=list || retval=1
         if [[ $retval -gt 0 || $1 = -* ]] {
             +zinit-message "{nl}{error}unscope annex: {msg}Incorrect options" \
                 "given${${(M)1:#-*}:+ "(bad option: {ehi}$1{rst}{msg})"}." \
@@ -38,13 +38,20 @@
 
     local id=${${1#@}%%(///|//|/)}
 
-    if (( ${#help} )) || [[ -z $id ]] {
+    # --help/-h
+    if (( ${#help} )) || [[ -z $id ]] && (( !${#list} )) {
         if [[ -z $id ]] {
             +zinit-message "{ehi}unscope annex:{rst}{msg} Missing the ID to" \
                     "(un)scope. Usage:{rst}{nl}"
         }
         ∧za-unscope-scope-cmd-help-handler
         return retval
+    }
+
+    # --list/-l
+    if (( ${#list} )) {
+        .za-unscope-list-mappings
+        return $?
     }
 
     local new_teleid_data=${(v)Zinit_Annex_Unscope_Mappings[(i)<->. ##$id]}
