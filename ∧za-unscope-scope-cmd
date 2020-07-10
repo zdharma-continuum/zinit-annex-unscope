@@ -43,7 +43,7 @@
             +zinit-message "{ehi}unscope annex:{rst}{msg} Missing the ID to" \
                     "(un)scope. Usage:{rst}{nl}"
         }
-        ∧za-unscope-cmd-help-handler
+        ∧za-unscope-scope-cmd-help-handler
         return retval
     }
 
