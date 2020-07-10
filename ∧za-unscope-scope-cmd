@@ -37,13 +37,14 @@
         }
 
     local id=${${1#@}%%(///|//|/)}
+    if [[ -z $id && ${#help} -eq 0 && ${#list} -eq 0 ]] {
+        +zinit-message "{ehi}unscope annex:{rst}{msg} Missing the ID to" \
+            "(un)scope. Usage:{rst}{nl}"
+        help=( -h ) retval=1
+    }
 
     # --help/-h
-    if (( ${#help} )) || [[ -z $id ]] && (( !${#list} )) {
-        if [[ -z $id ]] {
-            +zinit-message "{ehi}unscope annex:{rst}{msg} Missing the ID to" \
-                    "(un)scope. Usage:{rst}{nl}"
-        }
+    if (( ${#help} )) {
         ∧za-unscope-scope-cmd-help-handler
         return retval
     }
@@ -73,7 +74,7 @@
         [[ -n $new_teleid_data ]] && integer from_disk=1
 
         if (( !existed && !${#no_api} )) {
-            .za-scope-dynamic ${${(M)${#msg}:#0}:+-q} "$id"
+            .za-scope-dynamic ${${(M)${:-${#msg}${+ZINIT_ICE[debug]}}:#00}:+-q} "$id"
             if (( 0 == status )) {
                 new_teleid_data=$REPLY\ 0
                 (( ${+ZINIT_ICE} )) && ZINIT_ICE[dynamic-unscope]=$REPLY\ 0
