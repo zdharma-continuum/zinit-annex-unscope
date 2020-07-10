@@ -112,40 +112,42 @@ Zinit_Annex_Unscope_Mappings=(
     # zsh-autocomplete
     "32.  autocomplete"			"marlonrichert/zsh-autocomplete 0"
     "33.  autocomp"			"marlonrichert/zsh-autocomplete 0"
-    "34.  acom"				"marlonrichert/zsh-autocomplete 0"
-    "35.  z-acom"			"marlonrichert/zsh-autocomplete 0"
+    "34.  aucom"			"marlonrichert/zsh-autocomplete 0"
+    "35.  acom"				"marlonrichert/zsh-autocomplete 0"
+    "36.  z-aucom"			"marlonrichert/zsh-autocomplete 0"
+    "37.  z-acom"			"marlonrichert/zsh-autocomplete 0"
 
     # zsh-autopair
-    "36.  autopair"			"hlissner/zsh-autopair 0"
-    "37.  aupair"			"hlissner/zsh-autopair 0"
-    "38.  aupa"				"hlissner/zsh-autopair 0"
-    "39.  z-aupa"			"hlissner/zsh-autopair 0"
+    "38.  autopair"			"hlissner/zsh-autopair 0"
+    "39.  aupair"			"hlissner/zsh-autopair 0"
+    "40.  aupa"				"hlissner/zsh-autopair 0"
+    "41.  z-aupa"			"hlissner/zsh-autopair 0"
 
     # zsh-vi-more/evil-registers
-    "40.  evil-reg"			"zsh-vi-more/evil-registers 0"
-    "41.  vi-reg"			"zsh-vi-more/evil-registers 0"
-    "42.  vireg"			"zsh-vi-more/evil-registers 0"
+    "42.  evil-reg"			"zsh-vi-more/evil-registers 0"
+    "43.  vi-reg"			"zsh-vi-more/evil-registers 0"
+    "44.  vireg"			"zsh-vi-more/evil-registers 0"
 
     # vi-motions
-    "43.  evil-mot"			"zsh-vi-more/vi-motions 0"
-    "44.  vi-mot"			"zsh-vi-more/vi-motions 0"
-    "45.  vimot"			"zsh-vi-more/vi-motions 0"
+    "45.  evil-mot"			"zsh-vi-more/vi-motions 0"
+    "46.  vi-mot"			"zsh-vi-more/vi-motions 0"
+    "47.  vimot"			"zsh-vi-more/vi-motions 0"
  
     # vi-increment
-    "46.  evil-inc"			"zsh-vi-more/vi-increment 0"
-    "47.  vi-inc"			"zsh-vi-more/vi-increment 0"
-    "48.  viinc"			"zsh-vi-more/vi-increment 0"
+    "48.  evil-inc"			"zsh-vi-more/vi-increment 0"
+    "49.  vi-inc"			"zsh-vi-more/vi-increment 0"
+    "50.  viinc"			"zsh-vi-more/vi-increment 0"
 
     # vi-quote
-    "49.  evil-qte"			"zsh-vi-more/vi-quote 0"
-    "50.  vi-qte"			"zsh-vi-more/vi-quote 0"
-    "51.  viqte"			"zsh-vi-more/vi-quote 0"
+    "51.  evil-qte"			"zsh-vi-more/vi-quote 0"
+    "52.  vi-qte"			"zsh-vi-more/vi-quote 0"
+    "53.  viqte"			"zsh-vi-more/vi-quote 0"
 
     # vi-quote
-    "52.  evil-dir-marks"		"zsh-vi-more/directory-marks 0"
-    "53.  vi-dir-marks"			"zsh-vi-more/directory-marks 0"
-    "54.  vi-dirma"			"zsh-vi-more/directory-marks 0"
-    "55.  vidirma"			"zsh-vi-more/directory-marks 0"
+    "54.  evil-dir-marks"		"zsh-vi-more/directory-marks 0"
+    "55.  vi-dir-marks"			"zsh-vi-more/directory-marks 0"
+    "56.  vi-dirma"			"zsh-vi-more/directory-marks 0"
+    "57.  vidirma"			"zsh-vi-more/directory-marks 0"
 )
 
 # vim:ft=zsh:tw=80:sw=4:sts=4:noet
