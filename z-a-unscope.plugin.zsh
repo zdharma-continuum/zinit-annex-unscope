@@ -59,45 +59,46 @@ Zinit_Annex_Unscope_Mappings=(
     "6.   bin-gem-node"			"zinit-zsh/z-a-bin-gem-node 0"
     "7.   bgn"				"zinit-zsh/z-a-bin-gem-node 0"
                                 
-    # zsh-syntax-highlighting  
-    "8.  z-sy-h"		        "zdharma/zsh-syntax-highlighting 0"
-
-    # fast-syntax-highlighting  
-    "9.  f-sy-h"		        "zdharma/fast-syntax-highlighting 0"
-    "10.  fsh"				"zdharma/fast-syntax-highlighting 0"
-
-    # history-search-multi-word
-    "11.  hsmw"				"zdharma/history-search-multi-word 0"
-
     # Prezto archive
-    "12.  archive"			"PZTM::archive 1"
-    "13.  arch"				"PZTM::archive 1"
+    "8.   archive"			"PZTM::archive 1"
+    "9.   arch"				"PZTM::archive 1"
 
     # Prezto directory
-    "14.  directory"			"PZTM::directory 1"
-    "15.  dir"				"PZTM::directory 1"
+    "10.  directory"			"PZTM::directory 1"
+    "11.  dir"				"PZTM::directory 1"
 
     # Prezto environment
-    "16.  environment"			"PZTM::environment 1"
-    "17.  env"				"PZTM::environment 1"
+    "12.  environment"			"PZTM::environment 1"
+    "13.  env"				"PZTM::environment 1"
 
     # Prezto utility
-    "18.  utility"			"PZTM::utility 1"
-    "19.  util"				"PZTM::utility 1"
+    "14.  utility"			"PZTM::utility 1"
+    "15.  util"				"PZTM::utility 1"
+
+    # fast-syntax-highlighting  
+    "16.  f-sy-h"		        "zdharma/fast-syntax-highlighting 0"
+    "17.  fsh"				"zdharma/fast-syntax-highlighting 0"
+
+    # history-search-multi-word
+    "18.  hsmw"				"zdharma/history-search-multi-word 0"
 
     # ZUI
-    "20.  zui"				"zdharma/zui 0"
-    "21.  ZUI"				"zdharma/zui 0"
+    "19.  zui"				"zdharma/zui 0"
+    "20.  ZUI"				"zdharma/zui 0"
 
     # Zconvey
-    "20.  zconv"			"zdharma/zconvey 0"
+    "21.  zconv"			"zdharma/zconvey 0"
 
     # Zbrowse
-    "21.  zbrowse"			"zdharma/zbrowse 0"
+    "22.  zbrowse"			"zdharma/zbrowse 0"
 
     # zsh-autosuggestions
-    "22.  autosuggestions"		"zsh-users/zsh-autosuggestions 0"
-    "23.  autosug"			"zsh-users/zsh-autosuggestions 0"
+    "23.  autosuggestions"		"zsh-users/zsh-autosuggestions 0"
+    "24.  autosug"			"zsh-users/zsh-autosuggestions 0"
+
+    # zsh-syntax-highlighting  
+    "25.  z-sy-h"		        "zsh-users/zsh-syntax-highlighting 0"
+
 )
 
 # vim:ft=zsh:tw=80:sw=4:sts=4:noet
