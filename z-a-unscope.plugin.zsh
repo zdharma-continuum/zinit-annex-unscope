@@ -58,49 +58,94 @@ Zinit_Annex_Unscope_Mappings=(
     # z-a-bin-gem-node                 
     "6.   bin-gem-node"			"zinit-zsh/z-a-bin-gem-node 0"
     "7.   bgn"				"zinit-zsh/z-a-bin-gem-node 0"
+
+    # zinit-console                 
+    "8.   console"			"zinit-zsh/zinit-console 0"
+    "9.   consolette"			"zinit-zsh/zinit-console 0"
                                 
     # Prezto archive
-    "8.   archive"			"PZTM::archive 1"
-    "9.   arch"				"PZTM::archive 1"
+    "10.  archive"			"PZTM::archive 1"
+    "11.  arch"				"PZTM::archive 1"
 
     # Prezto directory
-    "10.  directory"			"PZTM::directory 1"
-    "11.  dir"				"PZTM::directory 1"
+    "12.  directory"			"PZTM::directory 1"
+    "13.  dir"				"PZTM::directory 1"
 
     # Prezto environment
-    "12.  environment"			"PZTM::environment 1"
-    "13.  env"				"PZTM::environment 1"
+    "14.  environment"			"PZTM::environment 1"
+    "15.  env"				"PZTM::environment 1"
 
     # Prezto utility
-    "14.  utility"			"PZTM::utility 1"
-    "15.  util"				"PZTM::utility 1"
+    "16.  utility"			"PZTM::utility 1"
+    "17.  util"				"PZTM::utility 1"
 
     # fast-syntax-highlighting  
-    "16.  f-sy-h"		        "zdharma/fast-syntax-highlighting 0"
-    "17.  fsh"				"zdharma/fast-syntax-highlighting 0"
+    "18.  f-sy-h"		        "zdharma/fast-syntax-highlighting 0"
+    "19.  fsh"				"zdharma/fast-syntax-highlighting 0"
 
     # history-search-multi-word
-    "18.  hsmw"				"zdharma/history-search-multi-word 0"
+    "20.  hsmw"				"zdharma/history-search-multi-word 0"
 
     # ZUI
-    "19.  zui"				"zdharma/zui 0"
-    "20.  ZUI"				"zdharma/zui 0"
+    "21.  zui"				"zdharma/zui 0"
+    "22.  ZUI"				"zdharma/zui 0"
 
     # Zconvey
-    "21.  zconv"			"zdharma/zconvey 0"
+    "23.  zconv"			"zdharma/zconvey 0"
 
     # Zbrowse
-    "22.  zbrowse"			"zdharma/zbrowse 0"
+    "24.  zbrowse"			"zdharma/zbrowse 0"
+
+    # zzcomplete
+    "25.  zzcomp"			"zdharma/zzcomplete 0"
+    "26.  zzcom"			"zdharma/zzcomplete 0"
 
     # zsh-autosuggestions
-    "23.  autosuggestions"		"zsh-users/zsh-autosuggestions 0"
-    "24.  autosug"			"zsh-users/zsh-autosuggestions 0"
-    "25.  asug"				"zsh-users/zsh-autosuggestions 0"
-    "26.  z-asug"			"zsh-users/zsh-autosuggestions 0"
+    "27.  autosuggestions"		"zsh-users/zsh-autosuggestions 0"
+    "28.  autosug"			"zsh-users/zsh-autosuggestions 0"
+    "29.  asug"				"zsh-users/zsh-autosuggestions 0"
+    "30.  z-asug"			"zsh-users/zsh-autosuggestions 0"
 
     # zsh-syntax-highlighting  
-    "27.  z-sy-h"		        "zsh-users/zsh-syntax-highlighting 0"
+    "31.  z-sy-h"		        "zsh-users/zsh-syntax-highlighting 0"
 
+    # zsh-autocomplete
+    "32.  autocomplete"			"marlonrichert/zsh-autocomplete 0"
+    "33.  autocomp"			"marlonrichert/zsh-autocomplete 0"
+    "34.  acom"				"marlonrichert/zsh-autocomplete 0"
+    "35.  z-acom"			"marlonrichert/zsh-autocomplete 0"
+
+    # zsh-autopair
+    "36.  autopair"			"hlissner/zsh-autopair 0"
+    "37.  aupair"			"hlissner/zsh-autopair 0"
+    "38.  aupa"				"hlissner/zsh-autopair 0"
+    "39.  z-aupa"			"hlissner/zsh-autopair 0"
+
+    # zsh-vi-more/evil-registers
+    "40.  evil-reg"			"zsh-vi-more/evil-registers 0"
+    "41.  vi-reg"			"zsh-vi-more/evil-registers 0"
+    "42.  vireg"			"zsh-vi-more/evil-registers 0"
+
+    # vi-motions
+    "43.  evil-mot"			"zsh-vi-more/vi-motions 0"
+    "44.  vi-mot"			"zsh-vi-more/vi-motions 0"
+    "45.  vimot"			"zsh-vi-more/vi-motions 0"
+ 
+    # vi-increment
+    "46.  evil-inc"			"zsh-vi-more/vi-increment 0"
+    "47.  vi-inc"			"zsh-vi-more/vi-increment 0"
+    "48.  viinc"			"zsh-vi-more/vi-increment 0"
+
+    # vi-quote
+    "49.  evil-qte"			"zsh-vi-more/vi-quote 0"
+    "50.  vi-qte"			"zsh-vi-more/vi-quote 0"
+    "51.  viqte"			"zsh-vi-more/vi-quote 0"
+
+    # vi-quote
+    "52.  evil-dir-marks"		"zsh-vi-more/directory-marks 0"
+    "53.  vi-dir-marks"			"zsh-vi-more/directory-marks 0"
+    "54.  vi-dirma"			"zsh-vi-more/directory-marks 0"
+    "55.  vidirma"			"zsh-vi-more/directory-marks 0"
 )
 
 # vim:ft=zsh:tw=80:sw=4:sts=4:noet
