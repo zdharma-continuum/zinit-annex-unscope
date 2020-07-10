@@ -1,12 +1,16 @@
 # z-a-unscope
 
-A Zinit-Zsh annex that allows to install plugins without specifying the user
-name. It works as follows:
-- on the installation of a plugin without any slashes (`/`) in its name it'll
-query the GitHub API searching for **\*/{the-name}**, sorting on stars,
-- it first requires at least 10 forks on the candidates, then 2, then 0,
-- after finding a result it sets it as the remote-id of the plugin, storing the
-ID on disk for later automatic use.
+A Zinit-Zsh annex that allows to install plugins without specifying the GitHub
+user name. It works as follows:
+
+1. On the installation of a plugin without any slashes (/) in its name the
+   annex will query the GitHub API searching for **\*/{the-name}**, sorting on
+   stars.
+
+2. It first requires at least 10 forks on the candidates, then 2, then 0.
+
+3. After finding the best result it sets it as the **full** remote-id of the
+   plugin, storing the ID on disk for later automatic use.
 
 ## Usage Examples
 
