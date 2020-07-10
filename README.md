@@ -2,11 +2,13 @@
 
 A Zinit-Zsh annex that allows to install plugins without specifying the user
 name. It works as follows:
-- for a plugin name without any slashes (`/`) in it it'll query the GitHub API
-  searching for `*/{the-name}`, sorting on stars,
+- on the installation of a plugin without any slashes (`/`) in its name it'll query the GitHub API
+  searching for **\*/{the-name}**, sorting on stars,
 - it first requires at least 10 forks on the candidates, then 2, then 0,
 - after finding a result it sets it as the remote-id of the plugin, storing the
-  ID on disk.
+  ID on disk for later automatic use.
+
+## Mappings
 
 Besides the GitHub-API querying, there's also a fixed, curated list of mappings
 of short names to the full GitHub IDs. The list curently consists of:
