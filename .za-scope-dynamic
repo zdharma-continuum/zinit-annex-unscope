@@ -29,7 +29,7 @@
 	if [[ $reply[1] == (#b)([0-9]##):\ (*) ]] {
 	    forks=$match[1] id=$match[2]
 	    .zinit-any-colorify-as-uspl2 "$id"
-	    (( ${#quiet} )) || +zinit-message "{pre}unscope annex: {msg}GitHub-API found" \
+	    (( ${#quiet} )) || +zinit-message "{pre}unscope annex: {term}GitHub-API{msg} found" \
 		    "plugin ({var}forks{msg}>={data}$forks{msg},"\
 "max.stars){ehi}:{rst} $REPLY{msg}.{rst}"
 	    REPLY=$id

@@ -91,9 +91,9 @@
             local -a object_data
             object_data=( "${(@Q)${(@z)new_teleid_data}}" )
             .zinit-any-colorify-as-uspl2 "$object_data[1]"
-            (( from_dynamic )) && local msg_bit=" ({meta2}GH-API{msg})"
-            (( from_disk )) && local msg_bit=" (stored {meta2}GH-API{msg})"
-            (( from_static )) && local msg_bit=" ({meta2}static map{msg})"
+            (( from_dynamic )) && local msg_bit=" ({term}GH-API{msg})"
+            (( from_disk )) && local msg_bit=" (stored {term}GH-API{msg})"
+            (( from_static )) && local msg_bit=" ({term}static map{msg})"
 
             +zinit-message "{pre}unscope annex: {msg}The key{ehi}:{rst}" \
             "{data}$id{msg} matched$msg_bit to{ehi}:{rst}" \
