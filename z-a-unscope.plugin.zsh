@@ -3,8 +3,8 @@
 # Copyright (c) 2020 Sebastian Gniazdowski
 # License MIT
 
-# According to the Zsh Plugin Standard:
-# http://zdharma.org/Zsh-100-Commits-Club/Zsh-Plugin-Standard.html
+# Get $0 according to the Zsh Plugin Standard:
+# http://zdharma.org/Zsh-100-Commits-Club/Zsh-Plugin-Standard.html#zero-handling
 
 0="${${ZERO:-${0:#$ZSH_ARGZERO}}:-${(%):-%N}}"
 0="${${(M)0:#/*}:-$PWD/$0}"
@@ -13,28 +13,30 @@ typeset -gA Zinit_Annex_Unscope
 Zinit_Annex_Unscope[0]="$0" Zinit_Annex_Unscope[repo-dir]="${0:h}"
 
 autoload -Uz ∧za-unscope-before-load-handler \
-    ∧za-unscope-cmd-help-handler \
-    ∧za-unscope-cmd \
-    .za-unscope-dynamic
+    ∧za-unscope-scope-cmd-help-handler \
+    ∧za-unscope-scope-cmd \
+    .za-scope-dynamic
 
 # An empty stub to fill the help handler fields
 ∧za-unscope-help-null-handler() { :; }
 
+# The unscoping-support hook.
 @zinit-register-annex "z-a-unscope" \
     hook:before-load-5 \
     ∧za-unscope-before-load-handler \
     ∧za-unscope-help-null-handler \
     "dynamic-unscope''" # New ices
 
+# The subcommand `scope'.
 @zinit-register-annex "z-a-unscope" \
-    subcommand:unscope \
-    ∧za-unscope-cmd \
-    ∧za-unscope-cmd-help-handler
+    subcommand:scope \
+    ∧za-unscope-scope-cmd \
+    ∧za-unscope-scope-cmd-help-handler
 
 # The hash that holds mappings of the unscoped plugin names to the
 # scoped ones, and also the nick-names that map to the same, however
 # are different in that they're not just stripped GitHub user name
-# (i.e.: unscoped), but in general free names.
+# (i.e.: unscoped), but free in general names.
 
 typeset -gA Zinit_Annex_Unscope_Mappings
 

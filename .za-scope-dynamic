@@ -4,7 +4,7 @@
 # Copyright 2020 Sebastian Gniazdowski
 # License: MIT
 
-.za-unscope-dynamic() {
+.za-scope-dynamic() {
     builtin emulate -LR zsh
     builtin setopt extendedglob warncreateglobal typesetsilent noshortloops rcquotes
 
@@ -34,11 +34,10 @@
 "max.stars){ehi}:{rst} $REPLY{msg}.{rst}"
 	    REPLY=$id
 	    return 0
-	} else {
-	    REPLY=
-	    return 1
 	}
-    }
+    } 
+    REPLY=
+    return 1
 }
 
-# vim:ft=zsh:sw=4:sts=4:noet:
+# vim:ft=zsh:sw=4:sts=4:et:
