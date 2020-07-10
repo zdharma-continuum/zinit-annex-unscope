@@ -12,6 +12,11 @@
 typeset -gA Zinit_Annex_Unscope
 Zinit_Annex_Unscope[0]="$0" Zinit_Annex_Unscope[repo-dir]="${0:h}"
 
+# According to the Zsh Plugin Standard:
+# http://zdharma.org/Zsh-100-Commits-Club/Zsh-Plugin-Standard.html#std-hash
+typeset -gA Plugins
+Plugins[UNSCOPE_DIR]=${0:h}
+
 autoload -Uz ∧za-unscope-before-load-handler \
     ∧za-unscope-scope-cmd-help-handler \
     ∧za-unscope-scope-cmd \
