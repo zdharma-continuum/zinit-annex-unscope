@@ -95,9 +95,11 @@ Zinit_Annex_Unscope_Mappings=(
     # zsh-autosuggestions
     "23.  autosuggestions"		"zsh-users/zsh-autosuggestions 0"
     "24.  autosug"			"zsh-users/zsh-autosuggestions 0"
+    "25.  asug"				"zsh-users/zsh-autosuggestions 0"
+    "26.  z-asug"			"zsh-users/zsh-autosuggestions 0"
 
     # zsh-syntax-highlighting  
-    "25.  z-sy-h"		        "zsh-users/zsh-syntax-highlighting 0"
+    "27.  z-sy-h"		        "zsh-users/zsh-syntax-highlighting 0"
 
 )
 
