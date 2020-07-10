@@ -36,7 +36,7 @@
 
     ___id=${${___id#@}%%(///|//|/)}
 
-    if { ∧za-unscope-scope-cmd -r "$___id" } {
+    if { ∧za-unscope-scope-cmd -rt "$___id" } {
         local -a object_data
         object_data=( "${(@Q)${(@z)REPLY}}" )
 
