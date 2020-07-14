@@ -153,6 +153,22 @@ Zinit_Annex_Unscope_Mappings=(
     "55.  vi-dir-marks"			"zsh-vi-more/directory-marks 0"
     "56.  vi-dirma"			"zsh-vi-more/directory-marks 0"
     "57.  vidirma"			"zsh-vi-more/directory-marks 0"
+
+    # sharkdp/fd
+    "58.  fd"				"sharkdp/fd 0"
+    "59.  shark-fd"			"sharkdp/fd 0"
+
+    # sharkdp/bat
+    "60.  bat"				"sharkdp/bat 0"
+    "61.  shark-bat"			"sharkdp/bat 0"
+
+    # ogham/exa
+    "62.  exa"				"ogham/exa 0"
+
+    # zsh-users/zsh-completions
+    "63.  zsh-completions"		"zsh-users/zsh-completions 0"
+    "64.  completions"			"zsh-users/zsh-completions 0"
+    "65.  comps"			"zsh-users/zsh-completions 0"
 )
 
 # vim:ft=zsh:tw=80:sw=4:sts=4:noet
