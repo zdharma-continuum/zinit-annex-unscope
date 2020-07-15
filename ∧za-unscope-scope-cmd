@@ -60,16 +60,10 @@
     if [[ -z $new_teleid_data ]] {
         local -a reply
         integer existed
-        if .zinit-get-object-path snippet "$id"; then
+        if .zinit-get-object-path AUTO "$id"; then
             existed=1
-            { new_teleid_data="$(<$reply[1]/$reply[2]/._zinit/dynamic-unscope)" } 2>/dev/null
+            { new_teleid_data="$(<$REPLY/._zinit/dynamic-unscope)" } 2>/dev/null
         fi
-        if [[ -z $new_teleid_data ]] {
-            if .zinit-get-object-path plugin "$id"; then
-                existed=1
-                { new_teleid_data="$(<$reply[1]/._zinit/dynamic-unscope)" } 2>/dev/null
-            fi
-        }
 
         [[ -n $new_teleid_data ]] && integer from_disk=1
 
