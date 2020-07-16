@@ -12,6 +12,13 @@ user name. It works as follows:
 3. After finding the best result it sets it as the **full** remote-id of the
    plugin, storing the ID on disk for later automatic use.
 
+4. For security, for such GH-API request to be made a newly added (by this
+   annex) ice: `ghapi` is required to be given.
+
+5. Otherwise only the static database of mappings of short plugin-nicknames to
+   the full scoped IDs will be searched. It contains many mappings, like, e.g.:
+   **vi-reg** → **zsh-vi-more/evil-registers**, and more.
+
 ## Usage Examples
 
 1. An example installation via 2 nicknames (**env** and **vi-reg**) and by one
