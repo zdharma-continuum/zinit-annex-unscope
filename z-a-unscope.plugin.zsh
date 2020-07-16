@@ -31,7 +31,7 @@ autoload -Uz ∧za-unscope-before-load-handler \
     hook:before-load-5 \
     ∧za-unscope-before-load-handler \
     ∧za-unscope-help-null-handler \
-    "dynamic-unscope''" # New ices
+    "dynamic-unscope''|ghapi" # New ices
 
 # The subcommand `scope'.
 @zinit-register-annex "z-a-unscope" \

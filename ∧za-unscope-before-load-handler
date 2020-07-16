@@ -34,7 +34,7 @@
 
     local -a match mbegin mend reply
     local MATCH REPLY
-    integer MBEGIN MEND
+    integer MBEGIN MEND ibghapi=${+ZINIT_ICE[ghapi]}
 
     local -A tpe_map
     tpe_map=( 0 plugin 1 snippet )
@@ -42,7 +42,7 @@
     # Strip the ID from some possible accidental /-s
     ___id=${${___id#@}%%(///|//|/)}
 
-    if { ∧za-unscope-scope-cmd -rt "$___id" } {
+    if { ∧za-unscope-scope-cmd -rt "$___id" ${${(M)ibghapi:#0}:+-n} } {
 
         if (( Zinit_Annex_Unscope[enable-output] )) {
             # Clear the messages-flag, for cleanness
