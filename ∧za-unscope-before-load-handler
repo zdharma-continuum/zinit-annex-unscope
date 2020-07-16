@@ -19,7 +19,7 @@
     # Exclude IDs with slashes and also packages
     [[ $id == */* ]] && local bad_id=1 
     [[ $ZINIT_ICE[teleid] == */* ]] && local bad_tele=1
-    (( ${+ZINIT_ICE[pack]} )) && local is_pack=1
+    (( $+ZINIT_ICE[pack] )) && local is_pack=1
     if (( bad_id || bad_tele || is_pack )) {
         if (( ibshow_messages )) {
             local -a msgs
@@ -39,6 +39,7 @@
     local -A tpe_map
     tpe_map=( 0 plugin 1 snippet )
 
+    # Strip the ID from some possible accidental /-s
     ___id=${${___id#@}%%(///|//|/)}
 
     if { ∧za-unscope-scope-cmd -rt "$___id" } {
