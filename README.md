@@ -38,65 +38,94 @@ nicknames into the full **username/repository** plugin ID.
 Besides the GitHub-API querying, there's also a fixed, curated list of mappings
 of short names to the full GitHub IDs. The list currently consists of:
 
-| Short (Nick-) Name | GitHub ID
-|:-------------:|---------------------------------------------------|
-|null		|	zdharma/null                                |
-|as-monitor	|	zinit-zsh/z-a-as-monitor                    |
-|monitor	|	zinit-zsh/z-a-as-monitor                    |
-|patch-dl	|	zinit-zsh/z-a-patch-dl                      |
-|rust		|	zinit-zsh/z-a-rust                          |
-|bin-gem-node	|	zinit-zsh/z-a-bin-gem-node                  |
-|bgn		|	zinit-zsh/z-a-bin-gem-node                  |
-|console	|	zinit-zsh/zinit-console                     |
-|consolette	|	zinit-zsh/zinit-console                     |
-|archive	|	PZTM::archive 1                             |
-|arch		|	PZTM::archive 1                             |
-|directory	|	PZTM::directory 1                           |
-|dir		|	PZTM::directory 1                           |
-|environment	|	PZTM::environment 1                         |
-|env		|	PZTM::environment 1                         |
-|utility	|	PZTM::utility 1                             |
-|util		|	PZTM::utility 1                             |
-|f-sy-h		|        zdharma/fast-syntax-highlighting            |
-|fsh		|	zdharma/fast-syntax-highlighting            |
-|hsmw		|	zdharma/history-search-multi-word           |
-|zui		|	zdharma/zui                                 |
-|ZUI		|	zdharma/zui                                 |
-|zconv		|	zdharma/zconvey                             |
-|zbrowse	|	zdharma/zbrowse                             |
-|zzcomp		|	zdharma/zzcomplete                          |
-|zzcom		|	zdharma/zzcomplete                          |
-|autosuggestions|	zsh-users/zsh-autosuggestions               |
-|autosug	|	zsh-users/zsh-autosuggestions               |
-|asug		|	zsh-users/zsh-autosuggestions               |
-|z-asug		|	zsh-users/zsh-autosuggestions               |
-|z-sy-h		|        zsh-users/zsh-syntax-highlighting           |
-|autocomplete	|	marlonrichert/zsh-autocomplete              |
-|autocomp	|	marlonrichert/zsh-autocomplete              |
-|aucom		|	marlonrichert/zsh-autocomplete              |
-|acom		|	marlonrichert/zsh-autocomplete              |
-|z-aucom	|	marlonrichert/zsh-autocomplete              |
-|z-acom		|	marlonrichert/zsh-autocomplete              |
-|autopair	|	hlissner/zsh-autopair                       |
-|aupair		|	hlissner/zsh-autopair                       |
-|aupa		|	hlissner/zsh-autopair                       |
-|z-aupa		|	hlissner/zsh-autopair                       |
-|evil-reg	|	zsh-vi-more/evil-registers                  |
-|vi-reg		|	zsh-vi-more/evil-registers                  |
-|vireg		|	zsh-vi-more/evil-registers                  |
-|evil-mot	|	zsh-vi-more/vi-motions                      |
-|vi-mot		|	zsh-vi-more/vi-motions                      |
-|vimot		|	zsh-vi-more/vi-motions                      |
-|evil-inc	|	zsh-vi-more/vi-increment                    |
-|vi-inc		|	zsh-vi-more/vi-increment                    |
-|viinc		|	zsh-vi-more/vi-increment                    |
-|evil-qte	|	zsh-vi-more/vi-quote                        |
-|vi-qte		|	zsh-vi-more/vi-quote                        |
-|viqte		|	zsh-vi-more/vi-quote                        |
-|evil-dir-marks	|	zsh-vi-more/directory-marks                 |
-|vi-dir-marks	|	zsh-vi-more/directory-marks                 |
-|vi-dirma	|	zsh-vi-more/directory-marks                 |
-|vidirma	|	zsh-vi-more/directory-marks                 |
+|    Short (Nick-) Name  |                GitHub ID                 |
+|:----------------------:|------------------------------------------|
+|      null              |   zdharma/null                           |
+|      z-a-as-monitor    |   zinit-zsh/z-a-as-monitor               |
+|      as-monitor        |   zinit-zsh/z-a-as-monitor               |
+|      monitor           |   zinit-zsh/z-a-as-monitor               |
+|      z-a-patch-dl      |   zinit-zsh/z-a-patch-dl                 |
+|      patch-dl          |   zinit-zsh/z-a-patch-dl                 |
+|      z-a-submods       |   zinit-zsh/z-a-submods                  |
+|      submods           |   zinit-zsh/z-a-submods                  |
+|      z-a-rust          |   zinit-zsh/z-a-rust                     |
+|      rust              |   zinit-zsh/z-a-rust                     |
+|       z-a-bin-gem-node  |   zinit-zsh/z-a-bin-gem-node            |
+|       bin-gem-node      |   zinit-zsh/z-a-bin-gem-node            |
+|       bgn               |   zinit-zsh/z-a-bin-gem-node            |
+|       zinit-console     |   zinit-zsh/zinit-console               |
+|       console           |   zinit-zsh/zinit-console               |
+|       consolette        |   zinit-zsh/zinit-console               |
+|      archive           |   PZTM::archive                          |
+|      arch              |   PZTM::archive                          |
+|      directory         |   PZTM::directory                        |
+|      dir               |   PZTM::directory                        |
+|      environment       |   PZTM::environment                      |
+|      env               |   PZTM::environment                      |
+|      utility           |   PZTM::utility                          |
+|      util              |   PZTM::utility                          |
+|      fast-syntax-highl |   zdharma/fast-syntax-highlighting       |
+|      f-sy-h            |   zdharma/fast-syntax-highlighting       |
+|      fsh               |   zdharma/fast-syntax-highlighting       |
+|      history-search-mu |   zdharma/history-search-multi-word      |
+|      hsmw              |   zdharma/history-search-multi-word      |
+|      zui               |   zdharma/zui                            |
+|      ZUI               |   zdharma/zui                            |
+|      zconvey           |   zdharma/zconvey                        |
+|      zconv             |   zdharma/zconvey                        |
+|      zbrowse           |   zdharma/zbrowse                        |
+|      zzcomplete        |   zdharma/zzcomplete                     |
+|      zzcomp            |   zdharma/zzcomplete                     |
+|      zzcom             |   zdharma/zzcomplete                     |
+|      zsh-autosuggestio |   zsh-users/zsh-autosuggestions          |
+|      autosuggestions   |   zsh-users/zsh-autosuggestions          |
+|      autosug           |   zsh-users/zsh-autosuggestions          |
+|      asug              |   zsh-users/zsh-autosuggestions          |
+|      z-asug            |   zsh-users/zsh-autosuggestions          |
+|      zsh-syntax-highli |   zsh-users/zsh-syntax-highlighting      |
+|      z-sy-h            |   zsh-users/zsh-syntax-highlighting      |
+|      zsh-autocomplete  |   marlonrichert/zsh-autocomplete         |
+|      autocomplete      |   marlonrichert/zsh-autocomplete         |
+|      autocomp          |   marlonrichert/zsh-autocomplete         |
+|      aucom             |   marlonrichert/zsh-autocomplete         |
+|      acom              |   marlonrichert/zsh-autocomplete         |
+|      z-aucom           |   marlonrichert/zsh-autocomplete         |
+|      z-acom            |   marlonrichert/zsh-autocomplete         |
+|      zsh-autopair      |   hlissner/zsh-autopair                  |
+|      autopair          |   hlissner/zsh-autopair                  |
+|      aupair            |   hlissner/zsh-autopair                  |
+|      aupa              |   hlissner/zsh-autopair                  |
+|      z-aupa            |   hlissner/zsh-autopair                  |
+|      evil-registers    |   zsh-vi-more/evil-registers             |
+|      evil-reg          |   zsh-vi-more/evil-registers             |
+|      vi-reg            |   zsh-vi-more/evil-registers             |
+|      vireg             |   zsh-vi-more/evil-registers             |
+|      vi-motions        |   zsh-vi-more/vi-motions                 |
+|      evil-mot          |   zsh-vi-more/vi-motions                 |
+|      vi-mot            |   zsh-vi-more/vi-motions                 |
+|      vimot             |   zsh-vi-more/vi-motions                 |
+|      vi-increment      |   zsh-vi-more/vi-increment               |
+|      evil-inc          |   zsh-vi-more/vi-increment               |
+|      vi-inc            |   zsh-vi-more/vi-increment               |
+|      viinc             |   zsh-vi-more/vi-increment               |
+|      vi-quote          |   zsh-vi-more/vi-quote                   |
+|      evil-qte          |   zsh-vi-more/vi-quote                   |
+|      vi-qte            |   zsh-vi-more/vi-quote                   |
+|      viqte             |   zsh-vi-more/vi-quote                   |
+|      directory-marks   |   zsh-vi-more/directory-marks            |
+|      evil-dir-marks    |   zsh-vi-more/directory-marks            |
+|      vi-dir-marks      |   zsh-vi-more/directory-marks            |
+|      vi-dirma          |   zsh-vi-more/directory-marks            |
+|      vidirma           |   zsh-vi-more/directory-marks            |
+|      fd                |   sharkdp/fd                             |
+|      shark-fd          |   sharkdp/fd                             |
+|      bat               |   sharkdp/bat                            |
+|      shark-bat         |   sharkdp/bat                            |
+|      exa               |   ogham/exa                              |
+|      zsh-completions   |   zsh-users/zsh-completions              |
+|      completions       |   zsh-users/zsh-completions              |
+|      comps             |   zsh-users/zsh-completions              |
+|-------------------------------------------------------------------|
 
 You can let me know if you would like a name to be added to the list.
 
