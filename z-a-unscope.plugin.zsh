@@ -51,124 +51,146 @@ Zinit_Annex_Unscope_Mappings=(
     "1.   null"				"zdharma/null 0"
 
     # z-a-as-monitor
-    "2.   as-monitor"			"zinit-zsh/z-a-as-monitor 0"
-    "3.   monitor"			"zinit-zsh/z-a-as-monitor 0"
+    "2.   z-a-as-monitor"		"zinit-zsh/z-a-as-monitor 0"
+    "3.   as-monitor"			"zinit-zsh/z-a-as-monitor 0"
+    "4.   monitor"			"zinit-zsh/z-a-as-monitor 0"
                                          
     # z-a-patch-dl                     
-    "4.   patch-dl"			"zinit-zsh/z-a-patch-dl 0"
+    "5.   z-a-patch-dl"			"zinit-zsh/z-a-patch-dl 0"
+    "6.   patch-dl"			"zinit-zsh/z-a-patch-dl 0"
                                          
+    # z-a-submods                     
+    "7.   z-a-submods"			"zinit-zsh/z-a-submods 0"
+    "8.   submods"			"zinit-zsh/z-a-submods 0"
+
     # z-a-rust                         
-    "5.   rust"				"zinit-zsh/z-a-rust 0"
+    "9.   z-a-rust"			"zinit-zsh/z-a-rust 0"
+    "10.  rust"				"zinit-zsh/z-a-rust 0"
                                          
     # z-a-bin-gem-node                 
-    "6.   bin-gem-node"			"zinit-zsh/z-a-bin-gem-node 0"
-    "7.   bgn"				"zinit-zsh/z-a-bin-gem-node 0"
+    "11.   z-a-bin-gem-node"		"zinit-zsh/z-a-bin-gem-node 0"
+    "12.   bin-gem-node"		"zinit-zsh/z-a-bin-gem-node 0"
+    "13.   bgn"				"zinit-zsh/z-a-bin-gem-node 0"
 
     # zinit-console                 
-    "8.   console"			"zinit-zsh/zinit-console 0"
-    "9.   consolette"			"zinit-zsh/zinit-console 0"
+    "14.   zinit-console"		"zinit-zsh/zinit-console 0"
+    "15.   console"			"zinit-zsh/zinit-console 0"
+    "16.   consolette"			"zinit-zsh/zinit-console 0"
                                 
     # Prezto archive
-    "10.  archive"			"PZTM::archive 1"
-    "11.  arch"				"PZTM::archive 1"
+    "17.  archive"			"PZTM::archive 1"
+    "18.  arch"				"PZTM::archive 1"
 
     # Prezto directory
-    "12.  directory"			"PZTM::directory 1"
-    "13.  dir"				"PZTM::directory 1"
+    "19.  directory"			"PZTM::directory 1"
+    "20.  dir"				"PZTM::directory 1"
 
     # Prezto environment
-    "14.  environment"			"PZTM::environment 1"
-    "15.  env"				"PZTM::environment 1"
+    "21.  environment"			"PZTM::environment 1"
+    "22.  env"				"PZTM::environment 1"
 
     # Prezto utility
-    "16.  utility"			"PZTM::utility 1"
-    "17.  util"				"PZTM::utility 1"
+    "23.  utility"			"PZTM::utility 1"
+    "24.  util"				"PZTM::utility 1"
 
     # fast-syntax-highlighting  
-    "18.  f-sy-h"		        "zdharma/fast-syntax-highlighting 0"
-    "19.  fsh"				"zdharma/fast-syntax-highlighting 0"
+    "25.  fast-syntax-highlighting"	"zdharma/fast-syntax-highlighting 0"
+    "26.  f-sy-h"		        "zdharma/fast-syntax-highlighting 0"
+    "27.  fsh"				"zdharma/fast-syntax-highlighting 0"
 
     # history-search-multi-word
-    "20.  hsmw"				"zdharma/history-search-multi-word 0"
+    "28.  history-search-multi-word"	"zdharma/history-search-multi-word 0"
+    "29.  hsmw"				"zdharma/history-search-multi-word 0"
 
     # ZUI
-    "21.  zui"				"zdharma/zui 0"
-    "22.  ZUI"				"zdharma/zui 0"
+    "30.  zui"				"zdharma/zui 0"
+    "31.  ZUI"				"zdharma/zui 0"
 
     # Zconvey
-    "23.  zconv"			"zdharma/zconvey 0"
+    "32.  zconvey"			"zdharma/zconvey 0"
+    "33.  zconv"			"zdharma/zconvey 0"
 
     # Zbrowse
-    "24.  zbrowse"			"zdharma/zbrowse 0"
+    "34.  zbrowse"			"zdharma/zbrowse 0"
 
     # zzcomplete
-    "25.  zzcomp"			"zdharma/zzcomplete 0"
-    "26.  zzcom"			"zdharma/zzcomplete 0"
+    "35.  zzcomplete"			"zdharma/zzcomplete 0"
+    "36.  zzcomp"			"zdharma/zzcomplete 0"
+    "37.  zzcom"			"zdharma/zzcomplete 0"
 
     # zsh-autosuggestions
-    "27.  autosuggestions"		"zsh-users/zsh-autosuggestions 0"
-    "28.  autosug"			"zsh-users/zsh-autosuggestions 0"
-    "29.  asug"				"zsh-users/zsh-autosuggestions 0"
-    "30.  z-asug"			"zsh-users/zsh-autosuggestions 0"
+    "38.  zsh-autosuggestions"		"zsh-users/zsh-autosuggestions 0"
+    "39.  autosuggestions"		"zsh-users/zsh-autosuggestions 0"
+    "40.  autosug"			"zsh-users/zsh-autosuggestions 0"
+    "41.  asug"				"zsh-users/zsh-autosuggestions 0"
+    "42.  z-asug"			"zsh-users/zsh-autosuggestions 0"
 
     # zsh-syntax-highlighting  
-    "31.  z-sy-h"		        "zsh-users/zsh-syntax-highlighting 0"
+    "43.  zsh-syntax-highlighting"      "zsh-users/zsh-syntax-highlighting 0"
+    "44.  z-sy-h"		        "zsh-users/zsh-syntax-highlighting 0"
 
     # zsh-autocomplete
-    "32.  autocomplete"			"marlonrichert/zsh-autocomplete 0"
-    "33.  autocomp"			"marlonrichert/zsh-autocomplete 0"
-    "34.  aucom"			"marlonrichert/zsh-autocomplete 0"
-    "35.  acom"				"marlonrichert/zsh-autocomplete 0"
-    "36.  z-aucom"			"marlonrichert/zsh-autocomplete 0"
-    "37.  z-acom"			"marlonrichert/zsh-autocomplete 0"
+    "45.  zsh-autocomplete"		"marlonrichert/zsh-autocomplete 0"
+    "46.  autocomplete"			"marlonrichert/zsh-autocomplete 0"
+    "47.  autocomp"			"marlonrichert/zsh-autocomplete 0"
+    "48.  aucom"			"marlonrichert/zsh-autocomplete 0"
+    "49.  acom"				"marlonrichert/zsh-autocomplete 0"
+    "50.  z-aucom"			"marlonrichert/zsh-autocomplete 0"
+    "51.  z-acom"			"marlonrichert/zsh-autocomplete 0"
 
     # zsh-autopair
-    "38.  autopair"			"hlissner/zsh-autopair 0"
-    "39.  aupair"			"hlissner/zsh-autopair 0"
-    "40.  aupa"				"hlissner/zsh-autopair 0"
-    "41.  z-aupa"			"hlissner/zsh-autopair 0"
+    "52.  zsh-autopair"			"hlissner/zsh-autopair 0"
+    "53.  autopair"			"hlissner/zsh-autopair 0"
+    "54.  aupair"			"hlissner/zsh-autopair 0"
+    "55.  aupa"				"hlissner/zsh-autopair 0"
+    "56.  z-aupa"			"hlissner/zsh-autopair 0"
 
     # zsh-vi-more/evil-registers
-    "42.  evil-reg"			"zsh-vi-more/evil-registers 0"
-    "43.  vi-reg"			"zsh-vi-more/evil-registers 0"
-    "44.  vireg"			"zsh-vi-more/evil-registers 0"
+    "57.  evil-registers"		"zsh-vi-more/evil-registers 0"
+    "58.  evil-reg"			"zsh-vi-more/evil-registers 0"
+    "59.  vi-reg"			"zsh-vi-more/evil-registers 0"
+    "60.  vireg"			"zsh-vi-more/evil-registers 0"
 
     # vi-motions
-    "45.  evil-mot"			"zsh-vi-more/vi-motions 0"
-    "46.  vi-mot"			"zsh-vi-more/vi-motions 0"
-    "47.  vimot"			"zsh-vi-more/vi-motions 0"
+    "61.  vi-motions"			"zsh-vi-more/vi-motions 0"
+    "62.  evil-mot"			"zsh-vi-more/vi-motions 0"
+    "63.  vi-mot"			"zsh-vi-more/vi-motions 0"
+    "64.  vimot"			"zsh-vi-more/vi-motions 0"
  
     # vi-increment
-    "48.  evil-inc"			"zsh-vi-more/vi-increment 0"
-    "49.  vi-inc"			"zsh-vi-more/vi-increment 0"
-    "50.  viinc"			"zsh-vi-more/vi-increment 0"
+    "65.  vi-increment"			"zsh-vi-more/vi-increment 0"
+    "66.  evil-inc"			"zsh-vi-more/vi-increment 0"
+    "67.  vi-inc"			"zsh-vi-more/vi-increment 0"
+    "68.  viinc"			"zsh-vi-more/vi-increment 0"
 
     # vi-quote
-    "51.  evil-qte"			"zsh-vi-more/vi-quote 0"
-    "52.  vi-qte"			"zsh-vi-more/vi-quote 0"
-    "53.  viqte"			"zsh-vi-more/vi-quote 0"
+    "69.  vi-quote"			"zsh-vi-more/vi-quote 0"
+    "70.  evil-qte"			"zsh-vi-more/vi-quote 0"
+    "71.  vi-qte"			"zsh-vi-more/vi-quote 0"
+    "72.  viqte"			"zsh-vi-more/vi-quote 0"
 
     # vi-quote
-    "54.  evil-dir-marks"		"zsh-vi-more/directory-marks 0"
-    "55.  vi-dir-marks"			"zsh-vi-more/directory-marks 0"
-    "56.  vi-dirma"			"zsh-vi-more/directory-marks 0"
-    "57.  vidirma"			"zsh-vi-more/directory-marks 0"
+    "73.  directory-marks"		"zsh-vi-more/directory-marks 0"
+    "73.  evil-dir-marks"		"zsh-vi-more/directory-marks 0"
+    "74.  vi-dir-marks"			"zsh-vi-more/directory-marks 0"
+    "75.  vi-dirma"			"zsh-vi-more/directory-marks 0"
+    "76.  vidirma"			"zsh-vi-more/directory-marks 0"
 
     # sharkdp/fd
-    "58.  fd"				"sharkdp/fd 0"
-    "59.  shark-fd"			"sharkdp/fd 0"
+    "77.  fd"				"sharkdp/fd 0"
+    "78.  shark-fd"			"sharkdp/fd 0"
 
     # sharkdp/bat
-    "60.  bat"				"sharkdp/bat 0"
-    "61.  shark-bat"			"sharkdp/bat 0"
+    "79.  bat"				"sharkdp/bat 0"
+    "80.  shark-bat"			"sharkdp/bat 0"
 
     # ogham/exa
-    "62.  exa"				"ogham/exa 0"
+    "81.  exa"				"ogham/exa 0"
 
     # zsh-users/zsh-completions
-    "63.  zsh-completions"		"zsh-users/zsh-completions 0"
-    "64.  completions"			"zsh-users/zsh-completions 0"
-    "65.  comps"			"zsh-users/zsh-completions 0"
+    "82.  zsh-completions"		"zsh-users/zsh-completions 0"
+    "83.  completions"			"zsh-users/zsh-completions 0"
+    "84.  comps"			"zsh-users/zsh-completions 0"
 )
 
 # vim:ft=zsh:tw=80:sw=4:sts=4:noet
