@@ -15,9 +15,10 @@ user name. It works as follows:
 4. For security, for such GH-API request to be made a newly added (by this
    annex) ice: `ghapi` is required to be given.
 
-5. Otherwise only the static database of mappings of short plugin-nicknames to
+5. Otherwise only the static database of mappings of short-plugin nicknames to
    the full scoped IDs will be searched. It contains many mappings, like, e.g.:
-   **vi-reg** → **zsh-vi-more/evil-registers**, and more.
+   **vi-reg** → **zsh-vi-more/evil-registers**, **zsh-syntax-highlighting**
+   → **zsh-users/zsh-syntax-highlighting** and more.
 
 ## Usage Examples
 
@@ -50,12 +51,12 @@ of short names to the full GitHub IDs. The list currently consists of:
 |      submods           |   zinit-zsh/z-a-submods                  |
 |      z-a-rust          |   zinit-zsh/z-a-rust                     |
 |      rust              |   zinit-zsh/z-a-rust                     |
-|       z-a-bin-gem-node  |   zinit-zsh/z-a-bin-gem-node            |
-|       bin-gem-node      |   zinit-zsh/z-a-bin-gem-node            |
-|       bgn               |   zinit-zsh/z-a-bin-gem-node            |
-|       zinit-console     |   zinit-zsh/zinit-console               |
-|       console           |   zinit-zsh/zinit-console               |
-|       consolette        |   zinit-zsh/zinit-console               |
+|      z-a-bin-gem-node  |   zinit-zsh/z-a-bin-gem-node            |
+|      bin-gem-node      |   zinit-zsh/z-a-bin-gem-node            |
+|      bgn               |   zinit-zsh/z-a-bin-gem-node            |
+|      zinit-console     |   zinit-zsh/zinit-console               |
+|      console           |   zinit-zsh/zinit-console               |
+|      consolette        |   zinit-zsh/zinit-console               |
 |      archive           |   PZTM::archive                          |
 |      arch              |   PZTM::archive                          |
 |      directory         |   PZTM::directory                        |
@@ -64,10 +65,10 @@ of short names to the full GitHub IDs. The list currently consists of:
 |      env               |   PZTM::environment                      |
 |      utility           |   PZTM::utility                          |
 |      util              |   PZTM::utility                          |
-|      fast-syntax-highl |   zdharma/fast-syntax-highlighting       |
+|      fast-syntax-highlighting |   zdharma/fast-syntax-highlighting       |
 |      f-sy-h            |   zdharma/fast-syntax-highlighting       |
 |      fsh               |   zdharma/fast-syntax-highlighting       |
-|      history-search-mu |   zdharma/history-search-multi-word      |
+|      history-search-multi-word |   zdharma/history-search-multi-word      |
 |      hsmw              |   zdharma/history-search-multi-word      |
 |      zui               |   zdharma/zui                            |
 |      ZUI               |   zdharma/zui                            |
@@ -77,12 +78,12 @@ of short names to the full GitHub IDs. The list currently consists of:
 |      zzcomplete        |   zdharma/zzcomplete                     |
 |      zzcomp            |   zdharma/zzcomplete                     |
 |      zzcom             |   zdharma/zzcomplete                     |
-|      zsh-autosuggestio |   zsh-users/zsh-autosuggestions          |
+|      zsh-autosuggestions |   zsh-users/zsh-autosuggestions          |
 |      autosuggestions   |   zsh-users/zsh-autosuggestions          |
 |      autosug           |   zsh-users/zsh-autosuggestions          |
 |      asug              |   zsh-users/zsh-autosuggestions          |
 |      z-asug            |   zsh-users/zsh-autosuggestions          |
-|      zsh-syntax-highli |   zsh-users/zsh-syntax-highlighting      |
+|      zsh-syntax-highlighting |   zsh-users/zsh-syntax-highlighting      |
 |      z-sy-h            |   zsh-users/zsh-syntax-highlighting      |
 |      zsh-autocomplete  |   marlonrichert/zsh-autocomplete         |
 |      autocomplete      |   marlonrichert/zsh-autocomplete         |
