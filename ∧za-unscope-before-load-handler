@@ -18,12 +18,13 @@
 
     # Exclude IDs with slashes and also packages
     [[ $id == */* ]] && local bad_id=1 
+    [[ $id == *:* ]] && local bad_id2=1
     [[ $ZINIT_ICE[teleid] == */* ]] && local bad_tele=1
     (( $+ZINIT_ICE[pack] )) && local is_pack=1
-    if (( bad_id || bad_tele || is_pack )) {
+    if (( bad_id || bad_id2 || bad_tele || is_pack )) {
         if (( ibshow_messages )) {
             local -a msgs
-            msgs=( ${bad_id:+the ID contains a slash}
+            msgs=( ${bad_id:+the ID contains a slash} ${bad_id2:+the ID looks like a snippet ID}
                    ${bad_tele:+"the {ice}teleid{meta}''{msg} ice contains a slash"}
                    ${is_pack:+"the ID is a package / {ice}pack{meta}''{msg} ice given"} )
             +zinit-message "{pre}unscope annex: {msg}Skipping the ID: {meta2}$id{msg}" \
