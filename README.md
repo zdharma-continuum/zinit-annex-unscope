@@ -17,8 +17,10 @@ user name. It works as follows:
 
 5. Otherwise only the static database of mappings of short-plugin nicknames to
    the full scoped IDs will be searched. It contains many mappings, like, e.g.:
-   **vi-reg** → **zsh-vi-more/evil-registers**, **zsh-syntax-highlighting**
-   → **zsh-users/zsh-syntax-highlighting** and more.
+   **vi-reg** → **zsh-vi-more/evil-registers**, and also the usual basic
+   unscopings of some of the popular plugins out there, like, e.g.:
+   **zsh-syntax-highlighting** → **zsh-users/zsh-syntax-highlighting** and
+   more.
 
 ## Usage Examples
 
