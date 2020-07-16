@@ -128,7 +128,6 @@ of short names to the full GitHub IDs. The list currently consists of:
 |      zsh-completions   |   zsh-users/zsh-completions              |
 |      completions       |   zsh-users/zsh-completions              |
 |      comps             |   zsh-users/zsh-completions              |
-|-------------------------------------------------------------------|
 
 You can let me know if you would like a name to be added to the list.
 
