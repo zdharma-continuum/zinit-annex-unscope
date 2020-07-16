@@ -17,7 +17,8 @@
 
     integer retval
 
-    [[ $1 == scope ]] && shift
+    [[ $1 == scope ]] && { shift; integer eas_scope=1; }
+    integer ibdebug_ice=$+ZINIT_ICE[debug]
 
     # -D - clear out the recognized options
     # -E - allow mixing of options and non-options
@@ -67,8 +68,24 @@
 
         [[ -n $new_teleid_data ]] && integer from_disk=1
 
+        # Enable all messages like if the debug ice was given
+        # for a new plugin installation — with the small exception
+        # on the additional GH-API messages — they'll be shown
+        # only when not called as `zinit scope …' unless the
+        # -m `scope'-option will be given — see the invocation of
+        # .za-scope-dynamic invocation below.
+        if (( ! existed )) {
+            integer ibshow_messages=1
+            # Set the flag for the possible outer function
+            Zinit_Annex_Unscope[enable-output]=1
+        } else {
+            # Clear the flag for the possible outer function
+            # (to not have it propagated after a direct call).
+            Zinit_Annex_Unscope[enable-output]=0
+        }
+
         if (( !existed && !${#no_api} )) {
-            .za-scope-dynamic ${${(M)${:-${#msg}${+ZINIT_ICE[debug]}}:#00}:+-q} "$id"
+            .za-scope-dynamic ${${(M)${:-${#msg}${${eas_scope:+0}:-$ibshow_messages}$ibdebug_ice}:#000}:+-q} "$id"
             if (( 0 == status )) {
                 new_teleid_data=$REPLY\ 0
                 (( ${+ZINIT_ICE} )) && ZINIT_ICE[dynamic-unscope]=$REPLY\ 0
@@ -98,6 +115,7 @@
                     "for the given key{ehi}:{rst} {data}$id{msg}.{rst}"
         }
     }
+
     REPLY=${${type:+$new_teleid_data}:-${new_teleid_data%%\ ##<->}}
     [[ -n $REPLY ]]
 }

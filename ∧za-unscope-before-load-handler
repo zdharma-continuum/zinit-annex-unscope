@@ -11,12 +11,17 @@
 
     local type=$1 id=$2 id_as=$3 hook=$4 subtype=$5
 
+    if (( $+ZINIT_ICE[debug] )) {
+        # Enable the output from this annex
+        integer ibshow_messages=1
+    }
+
     # Exclude IDs with slashes and also packages
     [[ $id == */* ]] && local bad_id=1 
     [[ $ZINIT_ICE[teleid] == */* ]] && local bad_tele=1
     (( ${+ZINIT_ICE[pack]} )) && local is_pack=1
     if (( bad_id || bad_tele || is_pack )) {
-        if (( $+ZINIT_ICE[debug] )) {
+        if (( ibshow_messages )) {
             local -a msgs
             msgs=( ${bad_id:+the ID contains a slash}
                    ${bad_tele:+"the {ice}teleid{meta}''{msg} ice contains a slash"}
@@ -37,6 +42,14 @@
     ___id=${${___id#@}%%(///|//|/)}
 
     if { ∧za-unscope-scope-cmd -rt "$___id" } {
+
+        if (( Zinit_Annex_Unscope[enable-output] )) {
+            # Clear the messages-flag, for cleanness
+            Zinit_Annex_Unscope[enable-output]=0
+            # Enable the output from this annex
+            integer ibshow_messages=1
+        }
+
         local -a object_data
         object_data=( "${(@Q)${(@z)REPLY}}" )
 
@@ -54,7 +67,7 @@
         }
 
         # Debug message.
-        if (( $+ZINIT_ICE[debug] )) {
+        if (( ibshow_messages )) {
             +zinit-message "{pre}unscope annex: {msg}Matched the key:" \
                 "{meta}$id {ehi}→{rst}{data} $ZINIT_ICE[teleid]" \
                 "{msg}({meta2}$tpe_map[$object_data[2]]{msg}).{rst}"
