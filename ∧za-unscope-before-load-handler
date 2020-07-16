@@ -41,7 +41,7 @@
     tpe_map=( 0 plugin 1 snippet )
 
     # Strip the ID from some possible accidental /-s
-    ___id=${${___id#@}%%(///|//|/)}
+    id=${${id#@}%%(///|//|/)}
 
     if { ∧za-unscope-scope-cmd -rt "$___id" ${${(M)ibghapi:#0}:+-n} } {
 
