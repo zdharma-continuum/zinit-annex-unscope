@@ -11,10 +11,8 @@
 
     local type=$1 id=$2 id_as=$3 args=$4 ices=$5 hook=$6 subtype=$7
 
-    if (( $+ZINIT_ICE[debug] )) {
-        # Enable the output from this annex
-        integer ibshow_messages=1
-    }
+    # Conditionally enable the output from this annex
+    integer ibshow_messages=$+ZINIT_ICE[debug]
 
     # Exclude IDs with slashes and also packages
     [[ $id == */* ]] && local bad_id=1 
@@ -40,9 +38,11 @@
     local -A tpe_map
     tpe_map=( 0 plugin 1 snippet )
 
-    # Strip the ID from some possible accidental /-s
+    # Strip the ID from some possible accidental /-s.
     id=${${id#@}%%(///|//|/)}
 
+    # I've pressed C-J. Will now press C-J and C-H a few times
+    # So the completion-method switching doesn't seem to work.
     if { ∧za-unscope-scope-cmd -rt "$___id" ${${(M)ibghapi:#0}:+-n} } {
 
         if (( Zinit_Annex_Unscope[enable-output] )) {
@@ -55,14 +55,13 @@
         local -a object_data
         object_data=( "${(@Q)${(@z)REPLY}}" )
 
-        # Overwrite the outside parameters in order
-        # to introduce the actual object's ID.
+        # Overwrite the outside parameters in order to introduce
+        # the actual object's ID.
         ZINIT_ICE[id-as]=${id_as:-$___id}
         ___id=$object_data[1]
         ZINIT_ICE[teleid]=$object_data[1]
 
-        # Test if we're being called from the
-        # object-load context.
+        # Test if we're being called from the object-load context.
         if [[ $subtype == load ]] {
             # Possibly change the object type.
             ___is_snippet=$object_data[2]
