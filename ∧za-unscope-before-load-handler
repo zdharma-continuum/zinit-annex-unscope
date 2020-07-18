@@ -58,7 +58,9 @@
         # Overwrite the outside parameters in order to introduce
         # the actual object's ID.
         ZINIT_ICE[id-as]=${id_as:-$___id}
-        ___id=$object_data[1]
+        ___id=$object_data[1]       # main ID
+        ___ehid=${ZINIT_ICE[id-as]} # handler ID
+        ___etid=$object_data[1]     # teleid
         ZINIT_ICE[teleid]=$object_data[1]
 
         # Test if we're being called from the object-load context.
