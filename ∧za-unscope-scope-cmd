@@ -18,7 +18,7 @@
     integer retval
 
     [[ $1 == scope ]] && { shift; integer eas_scope=1; }
-    integer ibdebug_ice=$+ZINIT_ICE[debug]
+    integer ibdebug_ice=$+ICE[debug]
 
     # -D - clear out the recognized options
     # -E - allow mixing of options and non-options
@@ -84,7 +84,7 @@
             .za-scope-dynamic ${${(M)${:-${#msg}${${eas_scope:+0}:-$ibshow_messages}$ibdebug_ice}:#000}:+-q} "$id"
             if (( 0 == status )) {
                 new_teleid_data=$REPLY\ 0
-                (( ${+ZINIT_ICE} )) && ZINIT_ICE[dynamic-unscope]=$REPLY\ 0
+                (( ${+ICE} )) && ICE[dynamic-unscope]=$REPLY\ 0
                 integer from_dynamic=1
             }
         }
