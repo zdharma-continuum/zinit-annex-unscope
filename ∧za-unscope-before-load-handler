@@ -12,7 +12,7 @@
     local type=$1 id=$2 id_as=$3 args=$4 ices=$5 hook=$6 subtype=$7
 
     # Conditionally enable the output from this annex
-    integer ibshow_messages=0
+    integer ibshow_messages=$+ICE[debug]
 
     # Exclude IDs with slashes and also packages
     [[ $id == */* ]] && local bad_id=1 
@@ -48,8 +48,15 @@
         if (( Zinit_Annex_Unscope[enable-output] )) {
             # Clear the messages-flag, for cleanness
             Zinit_Annex_Unscope[enable-output]=0
+            
             # Enable the output from this annex
-            integer ibshow_messages=1
+            # [Updated to disable via configuration]
+            if (( $+ZINIT_ANNNEX_UNSCOPE_HUMBLE ))
+            then
+                integer ibshow_messages=0
+            else
+                integer ibshow_messages=1
+            fi
         }
 
         local -a object_data
