@@ -28,13 +28,13 @@ user name. It works as follows:
 unscoped (i.e.: not using any GitHub username) ID that's being dynamically
 resolved by a request to **GitHub API**:
 
-![zinit-for-command](https://raw.githubusercontent.com/zinit-zsh/z-a-unscope/master/images/unscope-zinit-for.png)
+![zinit-for-command](https://raw.githubusercontent.com/zdharma-continuum/z-a-unscope/master/images/unscope-zinit-for.png)
 
 2. An example call to the **zinit scope …** subcommand that is added by this
 annex. It allows to translate the unscoped IDs and the short-static
 nicknames into the full **username/repository** plugin ID.
 
-![scope-subcommand](https://raw.githubusercontent.com/zinit-zsh/z-a-unscope/master/images/unscope-scope-cmd.png)
+![scope-subcommand](https://raw.githubusercontent.com/zdharma-continuum/z-a-unscope/master/images/unscope-scope-cmd.png)
 
 ## Static Mappings
 
@@ -43,22 +43,22 @@ of short names to the full GitHub IDs. The list currently consists of:
 
 |    Short (Nick-) Name  |           GitHub ID / scoped ID          |
 |:----------------------:|------------------------------------------|
-|      null              |   zdharma/null                           |
-|      z-a-as-monitor    |   zinit-zsh/z-a-as-monitor               |
-|      as-monitor        |   zinit-zsh/z-a-as-monitor               |
-|      monitor           |   zinit-zsh/z-a-as-monitor               |
-|      z-a-patch-dl      |   zinit-zsh/z-a-patch-dl                 |
-|      patch-dl          |   zinit-zsh/z-a-patch-dl                 |
-|      z-a-submods       |   zinit-zsh/z-a-submods                  |
-|      submods           |   zinit-zsh/z-a-submods                  |
-|      z-a-rust          |   zinit-zsh/z-a-rust                     |
-|      rust              |   zinit-zsh/z-a-rust                     |
-|      z-a-bin-gem-node  |   zinit-zsh/z-a-bin-gem-node            |
-|      bin-gem-node      |   zinit-zsh/z-a-bin-gem-node            |
-|      bgn               |   zinit-zsh/z-a-bin-gem-node            |
-|      zinit-console     |   zinit-zsh/zinit-console               |
-|      console           |   zinit-zsh/zinit-console               |
-|      consolette        |   zinit-zsh/zinit-console               |
+|      null              |   zdharma-continuum/null                           |
+|      z-a-as-monitor    |   zdharma-continuum/z-a-as-monitor               |
+|      as-monitor        |   zdharma-continuum/z-a-as-monitor               |
+|      monitor           |   zdharma-continuum/z-a-as-monitor               |
+|      z-a-patch-dl      |   zdharma-continuum/z-a-patch-dl                 |
+|      patch-dl          |   zdharma-continuum/z-a-patch-dl                 |
+|      z-a-submods       |   zdharma-continuum/z-a-submods                  |
+|      submods           |   zdharma-continuum/z-a-submods                  |
+|      z-a-rust          |   zdharma-continuum/z-a-rust                     |
+|      rust              |   zdharma-continuum/z-a-rust                     |
+|      z-a-bin-gem-node  |   zdharma-continuum/z-a-bin-gem-node            |
+|      bin-gem-node      |   zdharma-continuum/z-a-bin-gem-node            |
+|      bgn               |   zdharma-continuum/z-a-bin-gem-node            |
+|      zinit-console     |   zdharma-continuum/zinit-console               |
+|      console           |   zdharma-continuum/zinit-console               |
+|      consolette        |   zdharma-continuum/zinit-console               |
 |      archive           |   PZTM::archive                          |
 |      arch              |   PZTM::archive                          |
 |      directory         |   PZTM::directory                        |
@@ -67,19 +67,19 @@ of short names to the full GitHub IDs. The list currently consists of:
 |      env               |   PZTM::environment                      |
 |      utility           |   PZTM::utility                          |
 |      util              |   PZTM::utility                          |
-|      fast-syntax-highlighting |   zdharma/fast-syntax-highlighting       |
-|      f-sy-h            |   zdharma/fast-syntax-highlighting       |
-|      fsh               |   zdharma/fast-syntax-highlighting       |
-|      history-search-multi-word |   zdharma/history-search-multi-word      |
-|      hsmw              |   zdharma/history-search-multi-word      |
-|      zui               |   zdharma/zui                            |
-|      ZUI               |   zdharma/zui                            |
-|      zconvey           |   zdharma/zconvey                        |
-|      zconv             |   zdharma/zconvey                        |
-|      zbrowse           |   zdharma/zbrowse                        |
-|      zzcomplete        |   zdharma/zzcomplete                     |
-|      zzcomp            |   zdharma/zzcomplete                     |
-|      zzcom             |   zdharma/zzcomplete                     |
+|      fast-syntax-highlighting |   zdharma-continuum/fast-syntax-highlighting       |
+|      f-sy-h            |   zdharma-continuum/fast-syntax-highlighting       |
+|      fsh               |   zdharma-continuum/fast-syntax-highlighting       |
+|      history-search-multi-word |   zdharma-continuum/history-search-multi-word      |
+|      hsmw              |   zdharma-continuum/history-search-multi-word      |
+|      zui               |   zdharma-continuum/zui                            |
+|      ZUI               |   zdharma-continuum/zui                            |
+|      zconvey           |   zdharma-continuum/zconvey                        |
+|      zconv             |   zdharma-continuum/zconvey                        |
+|      zbrowse           |   zdharma-continuum/zbrowse                        |
+|      zzcomplete        |   zdharma-continuum/zzcomplete                     |
+|      zzcomp            |   zdharma-continuum/zzcomplete                     |
+|      zzcom             |   zdharma-continuum/zzcomplete                     |
 |      zsh-autosuggestions |   zsh-users/zsh-autosuggestions          |
 |      autosuggestions   |   zsh-users/zsh-autosuggestions          |
 |      autosug           |   zsh-users/zsh-autosuggestions          |
@@ -136,7 +136,7 @@ You can let me know if you would like a name to be added to the list.
 Simply load as a regular plugin, i.e.:
 
 ```zsh
-zinit light-mode for zinit-zsh/z-a-unscope
+zinit light-mode for zdharma-continuum/z-a-unscope
 ```
 
 It should be done possibly early in the `zshrc`, as otherwise the preceding
