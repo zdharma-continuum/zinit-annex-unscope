@@ -27,14 +27,14 @@ autoload -Uz ∧za-unscope-before-load-handler \
 ∧za-unscope-help-null-handler() { :; }
 
 # The unscoping-support hook.
-@zinit-register-annex "z-a-unscope" \
+@zinit-register-annex "zinit-annex-unscope" \
     hook:before-load-5 \
     ∧za-unscope-before-load-handler \
     ∧za-unscope-help-null-handler \
     "dynamic-unscope''|ghapi" # New ices
 
 # The subcommand `scope'.
-@zinit-register-annex "z-a-unscope" \
+@zinit-register-annex "zinit-annex-unscope" \
     subcommand:scope \
     ∧za-unscope-scope-cmd \
     ∧za-unscope-scope-cmd-help-handler
@@ -50,27 +50,27 @@ Zinit_Annex_Unscope_Mappings=(
     # zdharma-continuum/null
     "1.   null"				"zdharma-continuum/null 0"
 
-    # z-a-as-monitor
-    "2.   z-a-as-monitor"		"zdharma-continuum/z-a-as-monitor 0"
-    "3.   as-monitor"			"zdharma-continuum/z-a-as-monitor 0"
-    "4.   monitor"			"zdharma-continuum/z-a-as-monitor 0"
+    # zinit-annex-as-monitor
+    "2.   zinit-annex-as-monitor"		"zdharma-continuum/zinit-annex-as-monitor 0"
+    "3.   as-monitor"			"zdharma-continuum/zinit-annex-as-monitor 0"
+    "4.   monitor"			"zdharma-continuum/zinit-annex-as-monitor 0"
                                          
-    # z-a-patch-dl                     
-    "5.   z-a-patch-dl"			"zdharma-continuum/z-a-patch-dl 0"
-    "6.   patch-dl"			"zdharma-continuum/z-a-patch-dl 0"
+    # zinit-annex-patch-dl                     
+    "5.   zinit-annex-patch-dl"			"zdharma-continuum/zinit-annex-patch-dl 0"
+    "6.   patch-dl"			"zdharma-continuum/zinit-annex-patch-dl 0"
                                          
-    # z-a-submods                     
-    "7.   z-a-submods"			"zdharma-continuum/z-a-submods 0"
-    "8.   submods"			"zdharma-continuum/z-a-submods 0"
+    # zinit-annex-submods                     
+    "7.   zinit-annex-submods"			"zdharma-continuum/zinit-annex-submods 0"
+    "8.   submods"			"zdharma-continuum/zinit-annex-submods 0"
 
-    # z-a-rust                         
-    "9.   z-a-rust"			"zdharma-continuum/z-a-rust 0"
-    "10.  rust"				"zdharma-continuum/z-a-rust 0"
+    # zinit-annex-rust                         
+    "9.   zinit-annex-rust"			"zdharma-continuum/zinit-annex-rust 0"
+    "10.  rust"				"zdharma-continuum/zinit-annex-rust 0"
                                          
-    # z-a-bin-gem-node                 
-    "11.   z-a-bin-gem-node"		"zdharma-continuum/z-a-bin-gem-node 0"
-    "12.   bin-gem-node"		"zdharma-continuum/z-a-bin-gem-node 0"
-    "13.   bgn"				"zdharma-continuum/z-a-bin-gem-node 0"
+    # zinit-annex-bin-gem-node                 
+    "11.   zinit-annex-bin-gem-node"		"zdharma-continuum/zinit-annex-bin-gem-node 0"
+    "12.   bin-gem-node"		"zdharma-continuum/zinit-annex-bin-gem-node 0"
+    "13.   bgn"				"zdharma-continuum/zinit-annex-bin-gem-node 0"
 
     # zinit-console                 
     "14.   zinit-console"		"zdharma-continuum/zinit-console 0"

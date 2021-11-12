@@ -28,13 +28,13 @@ user name. It works as follows:
 unscoped (i.e.: not using any GitHub username) ID that's being dynamically
 resolved by a request to **GitHub API**:
 
-![zinit-for-command](https://raw.githubusercontent.com/zdharma-continuum/z-a-unscope/master/images/unscope-zinit-for.png)
+![zinit-for-command](https://raw.githubusercontent.com/zdharma-continuum/zinit-annex-unscope/master/images/unscope-zinit-for.png)
 
 2. An example call to the **zinit scope …** subcommand that is added by this
 annex. It allows to translate the unscoped IDs and the short-static
 nicknames into the full **username/repository** plugin ID.
 
-![scope-subcommand](https://raw.githubusercontent.com/zdharma-continuum/z-a-unscope/master/images/unscope-scope-cmd.png)
+![scope-subcommand](https://raw.githubusercontent.com/zdharma-continuum/zinit-annex-unscope/master/images/unscope-scope-cmd.png)
 
 ## Static Mappings
 
@@ -44,18 +44,18 @@ of short names to the full GitHub IDs. The list currently consists of:
 | Short (Nick-) Name        | GitHub ID / scoped ID                       |
 |:-------------------------:|---------------------------------------------|
 | null                      | zdharma-continuum/null                      |
-| z-a-as-monitor            | zdharma-continuum/z-a-as-monitor            |
-| as-monitor                | zdharma-continuum/z-a-as-monitor            |
-| monitor                   | zdharma-continuum/z-a-as-monitor            |
-| z-a-patch-dl              | zdharma-continuum/z-a-patch-dl              |
-| patch-dl                  | zdharma-continuum/z-a-patch-dl              |
-| z-a-submods               | zdharma-continuum/z-a-submods               |
-| submods                   | zdharma-continuum/z-a-submods               |
-| z-a-rust                  | zdharma-continuum/z-a-rust                  |
-| rust                      | zdharma-continuum/z-a-rust                  |
-| z-a-bin-gem-node          | zdharma-continuum/z-a-bin-gem-node          |
-| bin-gem-node              | zdharma-continuum/z-a-bin-gem-node          |
-| bgn                       | zdharma-continuum/z-a-bin-gem-node          |
+| zinit-annex-as-monitor            | zdharma-continuum/zinit-annex-as-monitor            |
+| as-monitor                | zdharma-continuum/zinit-annex-as-monitor            |
+| monitor                   | zdharma-continuum/zinit-annex-as-monitor            |
+| zinit-annex-patch-dl              | zdharma-continuum/zinit-annex-patch-dl              |
+| patch-dl                  | zdharma-continuum/zinit-annex-patch-dl              |
+| zinit-annex-submods               | zdharma-continuum/zinit-annex-submods               |
+| submods                   | zdharma-continuum/zinit-annex-submods               |
+| zinit-annex-rust                  | zdharma-continuum/zinit-annex-rust                  |
+| rust                      | zdharma-continuum/zinit-annex-rust                  |
+| zinit-annex-bin-gem-node          | zdharma-continuum/zinit-annex-bin-gem-node          |
+| bin-gem-node              | zdharma-continuum/zinit-annex-bin-gem-node          |
+| bgn                       | zdharma-continuum/zinit-annex-bin-gem-node          |
 | zinit-console             | zdharma-continuum/zinit-console             |
 | console                   | zdharma-continuum/zinit-console             |
 | consolette                | zdharma-continuum/zinit-console             |
@@ -136,7 +136,7 @@ You can let me know if you would like a name to be added to the list.
 Simply load as a regular plugin, i.e.:
 
 ```zsh
-zinit light-mode for zdharma-continuum/z-a-unscope
+zinit light-mode for zdharma-continuum/zinit-annex-unscope
 ```
 
 It should be done possibly early in the `zshrc`, as otherwise the preceding

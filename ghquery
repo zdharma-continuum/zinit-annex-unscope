@@ -30,7 +30,7 @@ typeset -g name=$1
 typeset -ga reply full_names
 typeset -g URL="https://api.github.com/search/repositories?q=$name+in:name+fork:false"
 
-#typeset -g CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/z-a-unscope"
+#typeset -g CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/zinit-annex-unscope"
 #command mkdir -p "$CACHE_DIR"
 
 download() {
