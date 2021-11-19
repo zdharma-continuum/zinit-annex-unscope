@@ -17,27 +17,27 @@ Zinit_Annex_Unscope[0]="$0" Zinit_Annex_Unscope[repo-dir]="${0:h}"
 typeset -gA Plugins
 Plugins[UNSCOPE_DIR]=${0:h}
 
-autoload -Uz ∧za-unscope-before-load-handler \
-    ∧za-unscope-scope-cmd-help-handler \
-    ∧za-unscope-scope-cmd \
+autoload -Uz za-unscope-before-load-handler \
+    za-unscope-scope-cmd-help-handler \
+    za-unscope-scope-cmd \
     .za-scope-dynamic \
     .za-unscope-list-mappings
 
 # An empty stub to fill the help handler fields
-∧za-unscope-help-null-handler() { :; }
+za-unscope-help-null-handler() { :; }
 
 # The unscoping-support hook.
 @zinit-register-annex "zinit-annex-unscope" \
     hook:before-load-5 \
-    ∧za-unscope-before-load-handler \
-    ∧za-unscope-help-null-handler \
+    za-unscope-before-load-handler \
+    za-unscope-help-null-handler \
     "dynamic-unscope''|ghapi" # New ices
 
 # The subcommand `scope'.
 @zinit-register-annex "zinit-annex-unscope" \
     subcommand:scope \
-    ∧za-unscope-scope-cmd \
-    ∧za-unscope-scope-cmd-help-handler
+    za-unscope-scope-cmd \
+    za-unscope-scope-cmd-help-handler
 
 # The hash that holds mappings of the unscoped plugin names to the
 # scoped ones, and also the nick-names that map to the same, however
