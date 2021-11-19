@@ -4,7 +4,7 @@
 # Copyright (c) 2020 Sebastian Gniazdowski
 # License: MIT
 
-∧za-unscope-scope-cmd() {
+za-unscope-scope-cmd() {
     # Set the base and typically useful options.
     builtin emulate -LR zsh
     builtin setopt extendedglob warncreateglobal typesetsilent noshortloops rcquotes
@@ -46,7 +46,7 @@
 
     # --help/-h
     if (( ${#help} )) {
-        ∧za-unscope-scope-cmd-help-handler
+        za-unscope-scope-cmd-help-handler
         return retval
     }
 

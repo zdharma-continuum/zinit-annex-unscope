@@ -3,7 +3,7 @@
 
 # Copyright (c) 2020 Sebastian Gniazdowski
 
-∧za-unscope-before-load-handler() {
+za-unscope-before-load-handler() {
 
     # Set the base and typically useful options.
     builtin emulate -LR zsh
@@ -43,7 +43,7 @@
 
     # I've pressed C-J. Will now press C-J and C-H a few times
     # So the completion-method switching doesn't seem to work.
-    if { ∧za-unscope-scope-cmd -rt "$___id" ${${(M)ibghapi:#0}:+-n} } {
+    if { za-unscope-scope-cmd -rt "$___id" ${${(M)ibghapi:#0}:+-n} } {
 
         if (( Zinit_Annex_Unscope[enable-output] )) {
             # Clear the messages-flag, for cleanness
