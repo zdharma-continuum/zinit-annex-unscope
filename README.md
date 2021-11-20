@@ -1,6 +1,6 @@
 # zinit-annex-unscope
 
-A Zinit-Zsh annex that allows to install plugins without specifying the GitHub
+A Zinit-Zsh annex that allows users to install plugins without specifying the GitHub
 user name. It works as follows:
 
 1. On the installation of a plugin without any slashes (/) in its name the
