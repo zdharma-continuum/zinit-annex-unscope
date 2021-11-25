@@ -1,5 +1,7 @@
 # zinit-annex-unscope
 
+> NOTE: Due to security concerns, we advise using fully-qualified plugin names. See [this issue](https://github.com/zdharma-continuum/zinit-annex-unscope/issues/4#issue-1059794405) for more context.
+
 A Zinit-Zsh annex that allows users to install plugins without specifying the GitHub
 user name. It works as follows:
 
