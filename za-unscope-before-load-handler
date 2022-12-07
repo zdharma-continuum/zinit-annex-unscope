@@ -79,7 +79,7 @@ za-unscope-before-load-handler() {
         # Debug message.
         if (( ibshow_messages )) {
             (($+functions[.zinit-two-paths])) || builtin source $ZINIT[BIN_DIR]/zinit-side.zsh
-            .zinit-any-colorify-as-uspl2 $ICE[teleid]
+            _zi::-any-colorify-as-uspl2 $ICE[teleid]
             +zinit-message "{pre}unscope annex: {msg}Matched the key:" \
                 "{meta}$id {ehi}→{rst} $REPLY" \
                 "{msg}({meta2}$tpe_map[$object_data[2]]{msg}).{rst}"
