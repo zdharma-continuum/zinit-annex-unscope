@@ -27,14 +27,14 @@ autoload -Uz za-unscope-before-load-handler \
 za-unscope-help-null-handler() { :; }
 
 # The unscoping-support hook.
-@zinit-register-annex "zinit-annex-unscope" \
+@zi::register-annex "zinit-annex-unscope" \
     hook:before-load-5 \
     za-unscope-before-load-handler \
     za-unscope-help-null-handler \
     "dynamic-unscope''|ghapi" # New ices
 
 # The subcommand `scope'.
-@zinit-register-annex "zinit-annex-unscope" \
+@zi::register-annex "zinit-annex-unscope" \
     subcommand:scope \
     za-unscope-scope-cmd \
     za-unscope-scope-cmd-help-handler
